@@ -82,6 +82,7 @@
             this.lstTablas.Name = "lstTablas";
             this.lstTablas.Size = new System.Drawing.Size(86, 108);
             this.lstTablas.TabIndex = 0;
+            this.lstTablas.SelectedIndexChanged += new System.EventHandler(this.lstTablas_SelectedIndexChanged);
             // 
             // lblTablas
             // 
