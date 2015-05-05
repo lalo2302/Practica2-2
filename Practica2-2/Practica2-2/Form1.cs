@@ -60,6 +60,7 @@ namespace Practica2_2
 
         private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            chlstCol.Items.Clear();
             string tabla = lstTablas.SelectedItem.ToString();
             Estructura objEst = new Estructura();
             string baseDatos = "db_POO";
