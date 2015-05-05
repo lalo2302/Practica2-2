@@ -92,5 +92,19 @@ namespace Practica2_2
                 chlstCol.Items.Add(Cnombre[i]);
             }
         }
+
+        private void btnCol_Click(object sender, EventArgs e)
+        {
+            int count = chlstCol.Items.Count;
+
+            for (int i = 0; i < count; i++)
+                if (!(chlstCol.GetItemChecked(i)))
+                    for (int j = 0; j < Cnombre.Count; j++)
+                        if (chlstCol.Items[i].ToString() == Cnombre[j])
+                        {
+                            Cnombre.RemoveAt(j);
+                            Ctipo.RemoveAt(j);
+                        }
+        }
     }
 }
