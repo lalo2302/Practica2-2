@@ -497,6 +497,7 @@
             this.btnBd.TabIndex = 23;
             this.btnBd.Text = "Inspeccionar";
             this.btnBd.UseVisualStyleBackColor = true;
+            this.btnBd.Click += new System.EventHandler(this.btnBd_Click);
             // 
             // Form1
             // 
