@@ -14,6 +14,10 @@ namespace Practica2_2
 {
     public partial class Form1 : Form
     {
+        static string baseDatos;
+        //Lista de las columnas con sus tipos
+        static List<string> Cnombre = new List<string>();
+        static List<string> Ctipo = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +25,7 @@ namespace Practica2_2
 
         private void btnBd_Click(object sender, EventArgs e)
         {
-            string baseDatos = txtBd.Text;
+            baseDatos = txtBd.Text;
             try
             {
                 lstTablas.Items.Clear();
@@ -39,9 +43,9 @@ namespace Practica2_2
         /// </summary>
         public void LlamarTablas(string bd)
         {
-            string baseDatos = bd;
+            string bDatos = bd;
             Estructura objEst = new Estructura();
-            objEst.Sentencia = string.Format("use {0} SELECT name FROM sys.tables", baseDatos);
+            objEst.Sentencia = string.Format("use {0} SELECT name FROM sys.tables", bDatos);
             objEst.Parametros = new SqlParameter[] { };
             objEst.Valores = new List<object>() { };
             objEst.Tabla = "Tablas";
@@ -63,8 +67,8 @@ namespace Practica2_2
             chlstCol.Items.Clear();
             string tabla = lstTablas.SelectedItem.ToString();
             Estructura objEst = new Estructura();
-            string baseDatos = "db_POO";
-            objEst.Sentencia = string.Format("use {0} SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{1}'", baseDatos, tabla);
+            string bDatos = baseDatos;
+            objEst.Sentencia = string.Format("use {0} SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{1}'", bDatos, tabla);
             objEst.Parametros = new SqlParameter[] { };
             objEst.Valores = new List<object>() { };
             objEst.Tabla = "Columnas";
@@ -74,10 +78,14 @@ namespace Practica2_2
 
             DataTable columnas = new DataTable();
             columnas = objOp.ObtenerDtt();
-
             for (int i = 0; i < columnas.Rows.Count; i++)
             {
-                chlstCol.Items.Add(columnas.Rows[i]["COLUMN_NAME"]);
+                Cnombre.Add(columnas.Rows[i]["COLUMN_NAME"].ToString());
+                Ctipo.Add(columnas.Rows[i]["DATA_TYPE"].ToString());
+            }
+            for (int i = 0; i < Cnombre.Count; i++)
+            {
+                chlstCol.Items.Add(Cnombre[i]);
             }
         }
     }
