@@ -19,15 +19,13 @@ namespace Practica2_2
             InitializeComponent();
         }
 
-        private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void btnBd_Click(object sender, EventArgs e)
         {
             string baseDatos = txtBd.Text;
             try
             {
+                lstTablas.Items.Clear();
+                chlstCol.Items.Clear();
                 LlamarTablas(baseDatos);
             }
             catch (Exception ex)
