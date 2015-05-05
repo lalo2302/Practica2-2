@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lstTablas = new System.Windows.Forms.ListBox();
             this.lblTablas = new System.Windows.Forms.Label();
             this.lblCol = new System.Windows.Forms.Label();
@@ -73,6 +74,7 @@
             this.lblBd = new System.Windows.Forms.Label();
             this.txtBd = new System.Windows.Forms.TextBox();
             this.btnBd = new System.Windows.Forms.Button();
+            this.btnFiltros = new System.Windows.Forms.Button();
             this.gboxInt.SuspendLayout();
             this.gboxString.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).BeginInit();
@@ -499,11 +501,22 @@
             this.btnBd.UseVisualStyleBackColor = true;
             this.btnBd.Click += new System.EventHandler(this.btnBd_Click);
             // 
+            // btnFiltros
+            // 
+            this.btnFiltros.Location = new System.Drawing.Point(356, 50);
+            this.btnFiltros.Name = "btnFiltros";
+            this.btnFiltros.Size = new System.Drawing.Size(49, 23);
+            this.btnFiltros.TabIndex = 24;
+            this.btnFiltros.Text = "Aplicar";
+            this.btnFiltros.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(420, 348);
+            this.Controls.Add(this.btnFiltros);
             this.Controls.Add(this.btnBd);
             this.Controls.Add(this.txtBd);
             this.Controls.Add(this.lblBd);
@@ -517,8 +530,10 @@
             this.Controls.Add(this.lblCol);
             this.Controls.Add(this.lblTablas);
             this.Controls.Add(this.lstTablas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Búsqueda";
             this.gboxInt.ResumeLayout(false);
             this.gboxInt.PerformLayout();
             this.gboxString.ResumeLayout(false);
@@ -576,6 +591,7 @@
         private System.Windows.Forms.Label lblBd;
         private System.Windows.Forms.TextBox txtBd;
         private System.Windows.Forms.Button btnBd;
+        private System.Windows.Forms.Button btnFiltros;
     }
 }
 
