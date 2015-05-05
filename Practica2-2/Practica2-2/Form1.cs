@@ -45,6 +45,24 @@ namespace Practica2_2
 
         private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string tabla = lstTablas.SelectedItem.ToString();
+            Estructura objEst = new Estructura();
+            string baseDatos = "db_POO";
+            objEst.Sentencia = string.Format("use {0} SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{1}'", baseDatos, tabla);
+            objEst.Parametros = new SqlParameter[] { };
+            objEst.Valores = new List<object>() { };
+            objEst.Tabla = "Columnas";
+
+            Operaciones objOp = new Operaciones();
+            objOp.Elemento = objEst;
+
+            DataTable columnas = new DataTable();
+            columnas = objOp.ObtenerDtt();
+
+            for (int i = 0; i < columnas.Rows.Count; i++)
+            {
+                chlstCol.Items.Add(columnas.Rows[i]["COLUMN_NAME"]);
+            }
         }
     }
 }
