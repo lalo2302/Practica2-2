@@ -42,10 +42,10 @@ namespace Practica2_2.Clases
             return valido;
         }
 
-        public DataTable ObtenerCredenciales()
+        public DataTable ObtenerDtt()
         {
             DataTable datos = new DataTable();
-            datos = objDatos.SeleccionaDatosDesconectado(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.Text, "tbl_Credencial");
+            datos = objDatos.SeleccionaDatosDesconectado(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.Text, elemento.Tabla);
             return datos;
         }
 
