@@ -36,46 +36,15 @@ namespace Practica2_2
 
             DataTable tablas = new DataTable();
             tablas = objOp.ObtenerDtt();
+
+            for (int i = 0; i < tablas.Rows.Count; i++)
+            {
+                lstTablas.Items.Add(tablas.Rows[i]["name"]);
+            }
         }
 
         private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
-
-
-
-
-        //    private void cmbTbl_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    SqlDataReader dr = null;
-        //    string cons_COLs = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = @tabla";
-
-        //    try
-        //    {
-        //        string basedatos = cmbBD.SelectedItem.ToString();
-        //        string tabla = cmbTbl.SelectedItem.ToString();
-        //        string cadenaCon = "Data Source=.;Initial Catalog=" + basedatos + ";Integrated Security=True";
-        //        SqlConnection con = new SqlConnection(cadenaCon);
-        //        con.Open();
-        //        SqlCommand cmd = new SqlCommand(cons_COLs, con);
-        //        cmd.Parameters.Add(new SqlParameter("tabla", tabla));
-        //        dr = cmd.ExecuteReader();
-        //        cmbCol.Items.Clear();
-        //        while (dr.Read())
-        //        {
-        //            string temp = dr.GetString(0);
-        //            cmbCol.Items.Add(dr.GetString(0));
-        //        }
-        //        dr.Dispose();
-        //        con.Close();
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //        throw;
-        //    }
-        //}
         }
     }
 }
