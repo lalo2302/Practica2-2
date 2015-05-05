@@ -45,9 +45,11 @@ namespace Practica2_2
         {
             string bDatos = bd;
             Estructura objEst = new Estructura();
-            objEst.Sentencia = string.Format("use {0} SELECT name FROM sys.tables", bDatos);
-            objEst.Parametros = new SqlParameter[] { };
-            objEst.Valores = new List<object>() { };
+            objEst.Sentencia = "use @bd SELECT name FROM sys.tables";
+            objEst.Parametros = new SqlParameter[] { 
+                new SqlParameter("bd", SqlDbType.VarChar, 50)
+            };
+            objEst.Valores = new List<object>() { bDatos };
             objEst.Tabla = "Tablas";
 
             Operaciones objOp = new Operaciones();
