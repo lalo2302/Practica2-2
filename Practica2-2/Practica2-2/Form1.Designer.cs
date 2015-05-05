@@ -75,6 +75,7 @@
             this.txtBd = new System.Windows.Forms.TextBox();
             this.btnBd = new System.Windows.Forms.Button();
             this.btnFiltros = new System.Windows.Forms.Button();
+            this.btnCol = new System.Windows.Forms.Button();
             this.gboxInt.SuspendLayout();
             this.gboxString.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).BeginInit();
@@ -505,17 +506,28 @@
             // 
             this.btnFiltros.Location = new System.Drawing.Point(356, 50);
             this.btnFiltros.Name = "btnFiltros";
-            this.btnFiltros.Size = new System.Drawing.Size(49, 23);
+            this.btnFiltros.Size = new System.Drawing.Size(49, 22);
             this.btnFiltros.TabIndex = 24;
             this.btnFiltros.Text = "Aplicar";
             this.btnFiltros.UseVisualStyleBackColor = true;
+            // 
+            // btnCol
+            // 
+            this.btnCol.Location = new System.Drawing.Point(103, 175);
+            this.btnCol.Name = "btnCol";
+            this.btnCol.Size = new System.Drawing.Size(122, 22);
+            this.btnCol.TabIndex = 25;
+            this.btnCol.Text = "Aplicar Columnas";
+            this.btnCol.UseVisualStyleBackColor = true;
+            this.btnCol.Click += new System.EventHandler(this.btnCol_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(420, 348);
+            this.ClientSize = new System.Drawing.Size(417, 344);
+            this.Controls.Add(this.btnCol);
             this.Controls.Add(this.btnFiltros);
             this.Controls.Add(this.btnBd);
             this.Controls.Add(this.txtBd);
@@ -592,6 +604,7 @@
         private System.Windows.Forms.TextBox txtBd;
         private System.Windows.Forms.Button btnBd;
         private System.Windows.Forms.Button btnFiltros;
+        private System.Windows.Forms.Button btnCol;
     }
 }
 
