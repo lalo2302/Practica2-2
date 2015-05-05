@@ -33,23 +33,23 @@
             this.lblCol = new System.Windows.Forms.Label();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.gboxInt = new System.Windows.Forms.GroupBox();
-            this.chlstCol = new System.Windows.Forms.CheckedListBox();
-            this.lblCampo1 = new System.Windows.Forms.Label();
-            this.lblCampo2 = new System.Windows.Forms.Label();
-            this.txtMayor = new System.Windows.Forms.TextBox();
-            this.lblMayor = new System.Windows.Forms.Label();
-            this.lblMenor = new System.Windows.Forms.Label();
-            this.txtMenor = new System.Windows.Forms.TextBox();
-            this.txtIgual = new System.Windows.Forms.TextBox();
-            this.txtDif = new System.Windows.Forms.TextBox();
-            this.lblIgual = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblDif = new System.Windows.Forms.Label();
-            this.chMayor = new System.Windows.Forms.CheckBox();
-            this.chMenor = new System.Windows.Forms.CheckBox();
-            this.chIgual = new System.Windows.Forms.CheckBox();
             this.chDif = new System.Windows.Forms.CheckBox();
+            this.chIgual = new System.Windows.Forms.CheckBox();
+            this.chMenor = new System.Windows.Forms.CheckBox();
+            this.chMayor = new System.Windows.Forms.CheckBox();
+            this.lblDif = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblIgual = new System.Windows.Forms.Label();
+            this.txtDif = new System.Windows.Forms.TextBox();
+            this.txtIgual = new System.Windows.Forms.TextBox();
+            this.txtMenor = new System.Windows.Forms.TextBox();
+            this.lblMenor = new System.Windows.Forms.Label();
+            this.lblMayor = new System.Windows.Forms.Label();
+            this.txtMayor = new System.Windows.Forms.TextBox();
+            this.lblCampo2 = new System.Windows.Forms.Label();
+            this.lblCampo1 = new System.Windows.Forms.Label();
+            this.chlstCol = new System.Windows.Forms.CheckedListBox();
             this.dboxString = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -135,131 +135,14 @@
             this.gboxInt.TabStop = false;
             this.gboxInt.Text = "Número";
             // 
-            // chlstCol
+            // chDif
             // 
-            this.chlstCol.FormattingEnabled = true;
-            this.chlstCol.Location = new System.Drawing.Point(104, 25);
-            this.chlstCol.Name = "chlstCol";
-            this.chlstCol.Size = new System.Drawing.Size(120, 109);
-            this.chlstCol.TabIndex = 0;
-            // 
-            // lblCampo1
-            // 
-            this.lblCampo1.AutoSize = true;
-            this.lblCampo1.Location = new System.Drawing.Point(3, 16);
-            this.lblCampo1.Name = "lblCampo1";
-            this.lblCampo1.Size = new System.Drawing.Size(46, 13);
-            this.lblCampo1.TabIndex = 0;
-            this.lblCampo1.Text = "[Campo]";
-            // 
-            // lblCampo2
-            // 
-            this.lblCampo2.AutoSize = true;
-            this.lblCampo2.Location = new System.Drawing.Point(3, 42);
-            this.lblCampo2.Name = "lblCampo2";
-            this.lblCampo2.Size = new System.Drawing.Size(46, 13);
-            this.lblCampo2.TabIndex = 2;
-            this.lblCampo2.Text = "[Campo]";
-            // 
-            // txtMayor
-            // 
-            this.txtMayor.Location = new System.Drawing.Point(74, 13);
-            this.txtMayor.Name = "txtMayor";
-            this.txtMayor.Size = new System.Drawing.Size(28, 20);
-            this.txtMayor.TabIndex = 4;
-            // 
-            // lblMayor
-            // 
-            this.lblMayor.AutoSize = true;
-            this.lblMayor.Location = new System.Drawing.Point(55, 16);
-            this.lblMayor.Name = "lblMayor";
-            this.lblMayor.Size = new System.Drawing.Size(13, 13);
-            this.lblMayor.TabIndex = 5;
-            this.lblMayor.Text = ">";
-            // 
-            // lblMenor
-            // 
-            this.lblMenor.AutoSize = true;
-            this.lblMenor.Location = new System.Drawing.Point(55, 42);
-            this.lblMenor.Name = "lblMenor";
-            this.lblMenor.Size = new System.Drawing.Size(13, 13);
-            this.lblMenor.TabIndex = 6;
-            this.lblMenor.Text = "<";
-            // 
-            // txtMenor
-            // 
-            this.txtMenor.Location = new System.Drawing.Point(74, 39);
-            this.txtMenor.Name = "txtMenor";
-            this.txtMenor.Size = new System.Drawing.Size(28, 20);
-            this.txtMenor.TabIndex = 7;
-            // 
-            // txtIgual
-            // 
-            this.txtIgual.Location = new System.Drawing.Point(74, 65);
-            this.txtIgual.Name = "txtIgual";
-            this.txtIgual.Size = new System.Drawing.Size(28, 20);
-            this.txtIgual.TabIndex = 8;
-            // 
-            // txtDif
-            // 
-            this.txtDif.Location = new System.Drawing.Point(74, 91);
-            this.txtDif.Name = "txtDif";
-            this.txtDif.Size = new System.Drawing.Size(28, 20);
-            this.txtDif.TabIndex = 9;
-            // 
-            // lblIgual
-            // 
-            this.lblIgual.AutoSize = true;
-            this.lblIgual.Location = new System.Drawing.Point(55, 68);
-            this.lblIgual.Name = "lblIgual";
-            this.lblIgual.Size = new System.Drawing.Size(13, 13);
-            this.lblIgual.TabIndex = 10;
-            this.lblIgual.Text = "=";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "[Campo]";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "[Campo]";
-            // 
-            // lblDif
-            // 
-            this.lblDif.AutoSize = true;
-            this.lblDif.Location = new System.Drawing.Point(52, 94);
-            this.lblDif.Name = "lblDif";
-            this.lblDif.Size = new System.Drawing.Size(16, 13);
-            this.lblDif.TabIndex = 13;
-            this.lblDif.Text = "!=";
-            // 
-            // chMayor
-            // 
-            this.chMayor.AutoSize = true;
-            this.chMayor.Location = new System.Drawing.Point(108, 16);
-            this.chMayor.Name = "chMayor";
-            this.chMayor.Size = new System.Drawing.Size(15, 14);
-            this.chMayor.TabIndex = 14;
-            this.chMayor.UseVisualStyleBackColor = true;
-            // 
-            // chMenor
-            // 
-            this.chMenor.AutoSize = true;
-            this.chMenor.Location = new System.Drawing.Point(108, 42);
-            this.chMenor.Name = "chMenor";
-            this.chMenor.Size = new System.Drawing.Size(15, 14);
-            this.chMenor.TabIndex = 15;
-            this.chMenor.UseVisualStyleBackColor = true;
+            this.chDif.AutoSize = true;
+            this.chDif.Location = new System.Drawing.Point(108, 95);
+            this.chDif.Name = "chDif";
+            this.chDif.Size = new System.Drawing.Size(15, 14);
+            this.chDif.TabIndex = 17;
+            this.chDif.UseVisualStyleBackColor = true;
             // 
             // chIgual
             // 
@@ -270,14 +153,131 @@
             this.chIgual.TabIndex = 16;
             this.chIgual.UseVisualStyleBackColor = true;
             // 
-            // chDif
+            // chMenor
             // 
-            this.chDif.AutoSize = true;
-            this.chDif.Location = new System.Drawing.Point(108, 95);
-            this.chDif.Name = "chDif";
-            this.chDif.Size = new System.Drawing.Size(15, 14);
-            this.chDif.TabIndex = 17;
-            this.chDif.UseVisualStyleBackColor = true;
+            this.chMenor.AutoSize = true;
+            this.chMenor.Location = new System.Drawing.Point(108, 42);
+            this.chMenor.Name = "chMenor";
+            this.chMenor.Size = new System.Drawing.Size(15, 14);
+            this.chMenor.TabIndex = 15;
+            this.chMenor.UseVisualStyleBackColor = true;
+            // 
+            // chMayor
+            // 
+            this.chMayor.AutoSize = true;
+            this.chMayor.Location = new System.Drawing.Point(108, 16);
+            this.chMayor.Name = "chMayor";
+            this.chMayor.Size = new System.Drawing.Size(15, 14);
+            this.chMayor.TabIndex = 14;
+            this.chMayor.UseVisualStyleBackColor = true;
+            // 
+            // lblDif
+            // 
+            this.lblDif.AutoSize = true;
+            this.lblDif.Location = new System.Drawing.Point(52, 94);
+            this.lblDif.Name = "lblDif";
+            this.lblDif.Size = new System.Drawing.Size(16, 13);
+            this.lblDif.TabIndex = 13;
+            this.lblDif.Text = "!=";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "[Campo]";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "[Campo]";
+            // 
+            // lblIgual
+            // 
+            this.lblIgual.AutoSize = true;
+            this.lblIgual.Location = new System.Drawing.Point(55, 68);
+            this.lblIgual.Name = "lblIgual";
+            this.lblIgual.Size = new System.Drawing.Size(13, 13);
+            this.lblIgual.TabIndex = 10;
+            this.lblIgual.Text = "=";
+            // 
+            // txtDif
+            // 
+            this.txtDif.Location = new System.Drawing.Point(74, 91);
+            this.txtDif.Name = "txtDif";
+            this.txtDif.Size = new System.Drawing.Size(28, 20);
+            this.txtDif.TabIndex = 9;
+            // 
+            // txtIgual
+            // 
+            this.txtIgual.Location = new System.Drawing.Point(74, 65);
+            this.txtIgual.Name = "txtIgual";
+            this.txtIgual.Size = new System.Drawing.Size(28, 20);
+            this.txtIgual.TabIndex = 8;
+            // 
+            // txtMenor
+            // 
+            this.txtMenor.Location = new System.Drawing.Point(74, 39);
+            this.txtMenor.Name = "txtMenor";
+            this.txtMenor.Size = new System.Drawing.Size(28, 20);
+            this.txtMenor.TabIndex = 7;
+            // 
+            // lblMenor
+            // 
+            this.lblMenor.AutoSize = true;
+            this.lblMenor.Location = new System.Drawing.Point(55, 42);
+            this.lblMenor.Name = "lblMenor";
+            this.lblMenor.Size = new System.Drawing.Size(13, 13);
+            this.lblMenor.TabIndex = 6;
+            this.lblMenor.Text = "<";
+            // 
+            // lblMayor
+            // 
+            this.lblMayor.AutoSize = true;
+            this.lblMayor.Location = new System.Drawing.Point(55, 16);
+            this.lblMayor.Name = "lblMayor";
+            this.lblMayor.Size = new System.Drawing.Size(13, 13);
+            this.lblMayor.TabIndex = 5;
+            this.lblMayor.Text = ">";
+            // 
+            // txtMayor
+            // 
+            this.txtMayor.Location = new System.Drawing.Point(74, 13);
+            this.txtMayor.Name = "txtMayor";
+            this.txtMayor.Size = new System.Drawing.Size(28, 20);
+            this.txtMayor.TabIndex = 4;
+            // 
+            // lblCampo2
+            // 
+            this.lblCampo2.AutoSize = true;
+            this.lblCampo2.Location = new System.Drawing.Point(3, 42);
+            this.lblCampo2.Name = "lblCampo2";
+            this.lblCampo2.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo2.TabIndex = 2;
+            this.lblCampo2.Text = "[Campo]";
+            // 
+            // lblCampo1
+            // 
+            this.lblCampo1.AutoSize = true;
+            this.lblCampo1.Location = new System.Drawing.Point(3, 16);
+            this.lblCampo1.Name = "lblCampo1";
+            this.lblCampo1.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo1.TabIndex = 0;
+            this.lblCampo1.Text = "[Campo]";
+            // 
+            // chlstCol
+            // 
+            this.chlstCol.FormattingEnabled = true;
+            this.chlstCol.Location = new System.Drawing.Point(104, 25);
+            this.chlstCol.Name = "chlstCol";
+            this.chlstCol.Size = new System.Drawing.Size(120, 109);
+            this.chlstCol.TabIndex = 0;
             // 
             // dboxString
             // 
