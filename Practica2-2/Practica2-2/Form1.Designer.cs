@@ -50,35 +50,38 @@
             this.lblCampo2 = new System.Windows.Forms.Label();
             this.lblCampo1 = new System.Windows.Forms.Label();
             this.chlstCol = new System.Windows.Forms.CheckedListBox();
-            this.dboxString = new System.Windows.Forms.GroupBox();
+            this.gboxString = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.lblIgualS = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblCamp4 = new System.Windows.Forms.Label();
+            this.lblCamp3 = new System.Windows.Forms.Label();
             this.lblCont = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCamp4 = new System.Windows.Forms.TextBox();
+            this.txtCamp3 = new System.Windows.Forms.TextBox();
+            this.txtCamp2 = new System.Windows.Forms.TextBox();
             this.lblTer = new System.Windows.Forms.Label();
             this.lblEmp = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtCamp1 = new System.Windows.Forms.TextBox();
+            this.lblCamp2 = new System.Windows.Forms.Label();
+            this.lblCamp1 = new System.Windows.Forms.Label();
             this.lblQuery = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRes = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblBd = new System.Windows.Forms.Label();
+            this.txtBd = new System.Windows.Forms.TextBox();
+            this.btnBd = new System.Windows.Forms.Button();
             this.gboxInt.SuspendLayout();
-            this.dboxString.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gboxString.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).BeginInit();
             this.SuspendLayout();
             // 
             // lstTablas
             // 
             this.lstTablas.FormattingEnabled = true;
-            this.lstTablas.Location = new System.Drawing.Point(12, 25);
+            this.lstTablas.Location = new System.Drawing.Point(12, 66);
             this.lstTablas.Name = "lstTablas";
             this.lstTablas.Size = new System.Drawing.Size(86, 108);
             this.lstTablas.TabIndex = 0;
@@ -87,7 +90,7 @@
             // lblTablas
             // 
             this.lblTablas.AutoSize = true;
-            this.lblTablas.Location = new System.Drawing.Point(12, 9);
+            this.lblTablas.Location = new System.Drawing.Point(12, 50);
             this.lblTablas.Name = "lblTablas";
             this.lblTablas.Size = new System.Drawing.Size(39, 13);
             this.lblTablas.TabIndex = 2;
@@ -96,7 +99,7 @@
             // lblCol
             // 
             this.lblCol.AutoSize = true;
-            this.lblCol.Location = new System.Drawing.Point(101, 9);
+            this.lblCol.Location = new System.Drawing.Point(101, 50);
             this.lblCol.Name = "lblCol";
             this.lblCol.Size = new System.Drawing.Size(53, 13);
             this.lblCol.TabIndex = 3;
@@ -105,7 +108,7 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(227, 9);
+            this.lblFiltro.Location = new System.Drawing.Point(227, 50);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(34, 13);
             this.lblFiltro.TabIndex = 4;
@@ -129,7 +132,7 @@
             this.gboxInt.Controls.Add(this.txtMayor);
             this.gboxInt.Controls.Add(this.lblCampo2);
             this.gboxInt.Controls.Add(this.lblCampo1);
-            this.gboxInt.Location = new System.Drawing.Point(230, 25);
+            this.gboxInt.Location = new System.Drawing.Point(230, 66);
             this.gboxInt.Name = "gboxInt";
             this.gboxInt.Size = new System.Drawing.Size(174, 121);
             this.gboxInt.TabIndex = 5;
@@ -275,35 +278,35 @@
             // chlstCol
             // 
             this.chlstCol.FormattingEnabled = true;
-            this.chlstCol.Location = new System.Drawing.Point(104, 25);
+            this.chlstCol.Location = new System.Drawing.Point(104, 66);
             this.chlstCol.Name = "chlstCol";
             this.chlstCol.Size = new System.Drawing.Size(120, 109);
             this.chlstCol.TabIndex = 0;
             // 
-            // dboxString
+            // gboxString
             // 
-            this.dboxString.Controls.Add(this.checkBox1);
-            this.dboxString.Controls.Add(this.checkBox2);
-            this.dboxString.Controls.Add(this.checkBox3);
-            this.dboxString.Controls.Add(this.checkBox4);
-            this.dboxString.Controls.Add(this.lblIgualS);
-            this.dboxString.Controls.Add(this.label4);
-            this.dboxString.Controls.Add(this.label5);
-            this.dboxString.Controls.Add(this.lblCont);
-            this.dboxString.Controls.Add(this.textBox1);
-            this.dboxString.Controls.Add(this.textBox2);
-            this.dboxString.Controls.Add(this.textBox3);
-            this.dboxString.Controls.Add(this.lblTer);
-            this.dboxString.Controls.Add(this.lblEmp);
-            this.dboxString.Controls.Add(this.textBox4);
-            this.dboxString.Controls.Add(this.label9);
-            this.dboxString.Controls.Add(this.label10);
-            this.dboxString.Location = new System.Drawing.Point(230, 25);
-            this.dboxString.Name = "dboxString";
-            this.dboxString.Size = new System.Drawing.Size(174, 121);
-            this.dboxString.TabIndex = 18;
-            this.dboxString.TabStop = false;
-            this.dboxString.Text = "Texto";
+            this.gboxString.Controls.Add(this.checkBox1);
+            this.gboxString.Controls.Add(this.checkBox2);
+            this.gboxString.Controls.Add(this.checkBox3);
+            this.gboxString.Controls.Add(this.checkBox4);
+            this.gboxString.Controls.Add(this.lblIgualS);
+            this.gboxString.Controls.Add(this.lblCamp4);
+            this.gboxString.Controls.Add(this.lblCamp3);
+            this.gboxString.Controls.Add(this.lblCont);
+            this.gboxString.Controls.Add(this.txtCamp4);
+            this.gboxString.Controls.Add(this.txtCamp3);
+            this.gboxString.Controls.Add(this.txtCamp2);
+            this.gboxString.Controls.Add(this.lblTer);
+            this.gboxString.Controls.Add(this.lblEmp);
+            this.gboxString.Controls.Add(this.txtCamp1);
+            this.gboxString.Controls.Add(this.lblCamp2);
+            this.gboxString.Controls.Add(this.lblCamp1);
+            this.gboxString.Location = new System.Drawing.Point(230, 66);
+            this.gboxString.Name = "gboxString";
+            this.gboxString.Size = new System.Drawing.Size(174, 121);
+            this.gboxString.TabIndex = 18;
+            this.gboxString.TabStop = false;
+            this.gboxString.Text = "Texto";
             // 
             // checkBox1
             // 
@@ -350,23 +353,23 @@
             this.lblIgualS.TabIndex = 13;
             this.lblIgualS.Text = "=";
             // 
-            // label4
+            // lblCamp4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "[Campo]";
+            this.lblCamp4.AutoSize = true;
+            this.lblCamp4.Location = new System.Drawing.Point(3, 94);
+            this.lblCamp4.Name = "lblCamp4";
+            this.lblCamp4.Size = new System.Drawing.Size(46, 13);
+            this.lblCamp4.TabIndex = 12;
+            this.lblCamp4.Text = "[Campo]";
             // 
-            // label5
+            // lblCamp3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "[Campo]";
+            this.lblCamp3.AutoSize = true;
+            this.lblCamp3.Location = new System.Drawing.Point(3, 68);
+            this.lblCamp3.Name = "lblCamp3";
+            this.lblCamp3.Size = new System.Drawing.Size(46, 13);
+            this.lblCamp3.TabIndex = 11;
+            this.lblCamp3.Text = "[Campo]";
             // 
             // lblCont
             // 
@@ -377,26 +380,26 @@
             this.lblCont.TabIndex = 10;
             this.lblCont.Text = "%x%";
             // 
-            // textBox1
+            // txtCamp4
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(52, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtCamp4.Location = new System.Drawing.Point(91, 91);
+            this.txtCamp4.Name = "txtCamp4";
+            this.txtCamp4.Size = new System.Drawing.Size(52, 20);
+            this.txtCamp4.TabIndex = 9;
             // 
-            // textBox2
+            // txtCamp3
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(52, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtCamp3.Location = new System.Drawing.Point(91, 65);
+            this.txtCamp3.Name = "txtCamp3";
+            this.txtCamp3.Size = new System.Drawing.Size(52, 20);
+            this.txtCamp3.TabIndex = 8;
             // 
-            // textBox3
+            // txtCamp2
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(52, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtCamp2.Location = new System.Drawing.Point(91, 39);
+            this.txtCamp2.Name = "txtCamp2";
+            this.txtCamp2.Size = new System.Drawing.Size(52, 20);
+            this.txtCamp2.TabIndex = 7;
             // 
             // lblTer
             // 
@@ -416,69 +419,98 @@
             this.lblEmp.TabIndex = 5;
             this.lblEmp.Text = "x%";
             // 
-            // textBox4
+            // txtCamp1
             // 
-            this.textBox4.Location = new System.Drawing.Point(91, 13);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(52, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtCamp1.Location = new System.Drawing.Point(91, 13);
+            this.txtCamp1.Name = "txtCamp1";
+            this.txtCamp1.Size = new System.Drawing.Size(52, 20);
+            this.txtCamp1.TabIndex = 4;
             // 
-            // label9
+            // lblCamp2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 42);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "[Campo]";
+            this.lblCamp2.AutoSize = true;
+            this.lblCamp2.Location = new System.Drawing.Point(3, 42);
+            this.lblCamp2.Name = "lblCamp2";
+            this.lblCamp2.Size = new System.Drawing.Size(46, 13);
+            this.lblCamp2.TabIndex = 2;
+            this.lblCamp2.Text = "[Campo]";
             // 
-            // label10
+            // lblCamp1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "[Campo]";
+            this.lblCamp1.AutoSize = true;
+            this.lblCamp1.Location = new System.Drawing.Point(3, 16);
+            this.lblCamp1.Name = "lblCamp1";
+            this.lblCamp1.Size = new System.Drawing.Size(46, 13);
+            this.lblCamp1.TabIndex = 0;
+            this.lblCamp1.Text = "[Campo]";
             // 
             // lblQuery
             // 
             this.lblQuery.AutoSize = true;
-            this.lblQuery.Location = new System.Drawing.Point(12, 159);
+            this.lblQuery.Location = new System.Drawing.Point(12, 200);
             this.lblQuery.Name = "lblQuery";
             this.lblQuery.Size = new System.Drawing.Size(35, 13);
             this.lblQuery.TabIndex = 19;
             this.lblQuery.Text = "Query";
             // 
-            // dataGridView1
+            // dgvRes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 187);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(392, 102);
-            this.dataGridView1.TabIndex = 20;
+            this.dgvRes.AllowUserToAddRows = false;
+            this.dgvRes.AllowUserToDeleteRows = false;
+            this.dgvRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRes.Location = new System.Drawing.Point(12, 228);
+            this.dgvRes.Name = "dgvRes";
+            this.dgvRes.ReadOnly = true;
+            this.dgvRes.Size = new System.Drawing.Size(392, 102);
+            this.dgvRes.TabIndex = 20;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(352, 154);
+            this.btnBuscar.Location = new System.Drawing.Point(352, 195);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 23);
             this.btnBuscar.TabIndex = 21;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // lblBd
+            // 
+            this.lblBd.AutoSize = true;
+            this.lblBd.Location = new System.Drawing.Point(12, 9);
+            this.lblBd.Name = "lblBd";
+            this.lblBd.Size = new System.Drawing.Size(129, 13);
+            this.lblBd.TabIndex = 22;
+            this.lblBd.Text = "Nombre de base de datos";
+            // 
+            // txtBd
+            // 
+            this.txtBd.Location = new System.Drawing.Point(147, 6);
+            this.txtBd.Name = "txtBd";
+            this.txtBd.Size = new System.Drawing.Size(77, 20);
+            this.txtBd.TabIndex = 18;
+            // 
+            // btnBd
+            // 
+            this.btnBd.Location = new System.Drawing.Point(236, 4);
+            this.btnBd.Name = "btnBd";
+            this.btnBd.Size = new System.Drawing.Size(96, 23);
+            this.btnBd.TabIndex = 23;
+            this.btnBd.Text = "Inspeccionar";
+            this.btnBd.UseVisualStyleBackColor = true;
+            this.btnBd.Click += new System.EventHandler(this.btnBd_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 305);
+            this.ClientSize = new System.Drawing.Size(420, 348);
+            this.Controls.Add(this.btnBd);
+            this.Controls.Add(this.txtBd);
+            this.Controls.Add(this.lblBd);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvRes);
             this.Controls.Add(this.lblQuery);
-            this.Controls.Add(this.dboxString);
+            this.Controls.Add(this.gboxString);
             this.Controls.Add(this.chlstCol);
             this.Controls.Add(this.gboxInt);
             this.Controls.Add(this.lblFiltro);
@@ -489,9 +521,9 @@
             this.Text = "Form1";
             this.gboxInt.ResumeLayout(false);
             this.gboxInt.PerformLayout();
-            this.dboxString.ResumeLayout(false);
-            this.dboxString.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gboxString.ResumeLayout(false);
+            this.gboxString.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,26 +553,29 @@
         private System.Windows.Forms.Label lblMenor;
         private System.Windows.Forms.Label lblMayor;
         private System.Windows.Forms.TextBox txtMayor;
-        private System.Windows.Forms.GroupBox dboxString;
+        private System.Windows.Forms.GroupBox gboxString;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label lblIgualS;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblCamp4;
+        private System.Windows.Forms.Label lblCamp3;
         private System.Windows.Forms.Label lblCont;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCamp4;
+        private System.Windows.Forms.TextBox txtCamp3;
+        private System.Windows.Forms.TextBox txtCamp2;
         private System.Windows.Forms.Label lblTer;
         private System.Windows.Forms.Label lblEmp;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtCamp1;
+        private System.Windows.Forms.Label lblCamp2;
+        private System.Windows.Forms.Label lblCamp1;
         private System.Windows.Forms.Label lblQuery;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRes;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label lblBd;
+        private System.Windows.Forms.TextBox txtBd;
+        private System.Windows.Forms.Button btnBd;
     }
 }
 

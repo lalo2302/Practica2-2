@@ -17,18 +17,35 @@ namespace Practica2_2
         public Form1()
         {
             InitializeComponent();
-            LlamarTablas();
         }
+
+        private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnBd_Click(object sender, EventArgs e)
+        {
+            string baseDatos = txtBd.Text;
+            try
+            {
+                LlamarTablas(baseDatos);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Esa base de datos no existe");
+            }
+        }
+
         /// <summary>
         /// Se obtiene el nombre de las tablas de 'baseDatos'
         /// </summary>
-        public void LlamarTablas()
+        public void LlamarTablas(string bd)
         {
+            string baseDatos = bd;
             Estructura objEst = new Estructura();
-            string baseDatos = "db_POO";
             objEst.Sentencia = string.Format("use {0} SELECT name FROM sys.tables", baseDatos);
-            objEst.Parametros = new SqlParameter[]{};
-            objEst.Valores = new List<object>() {};
+            objEst.Parametros = new SqlParameter[] { };
+            objEst.Valores = new List<object>() { };
             objEst.Tabla = "Tablas";
 
             Operaciones objOp = new Operaciones();
