@@ -32,27 +32,20 @@ namespace Practica2_2
             {
                 lstTablas.Items.Clear();
                 chlstCol.Items.Clear();
-                LlamarTablas(baseDatos);
+                DataTable tablas = new DataTable();
+                tablas = Campo.LlamarCampos(baseDatos);
+
+                for (int i = 0; i < tablas.Rows.Count; i++)
+                {
+                    lstTablas.Items.Add(tablas.Rows[i]["name"]);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Esa base de datos no existe");
             }
         }
-
-        /// <summary>
-        /// Se obtiene el nombre de las tablas de 'baseDatos'
-        /// </summary>
-        public void LlamarTablas(string bd)
-        {
-            DataTable tablas = new DataTable();
-            tablas = Campo.LlamarCampos(bd);
-
-            for (int i = 0; i < tablas.Rows.Count; i++)
-            {
-                lstTablas.Items.Add(tablas.Rows[i]["name"]);
-            }
-        }
+        
 
         private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
         {
