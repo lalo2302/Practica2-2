@@ -14,6 +14,8 @@ namespace Practica2_2
 {
     public partial class Form1 : Form
     {
+        Campo Campo = new Campo();
+        Tabla Tabla = new Tabla();
         static string baseDatos;
         //Lista de las columnas con sus tipos
         static List<string> Cnombre = new List<string>();
@@ -43,20 +45,8 @@ namespace Practica2_2
         /// </summary>
         public void LlamarTablas(string bd)
         {
-            string bDatos = bd;
-            Estructura objEst = new Estructura();
-            objEst.Sentencia = "use @bd SELECT name FROM sys.tables";
-            objEst.Parametros = new SqlParameter[] { 
-                new SqlParameter("bd", SqlDbType.VarChar, 50)
-            };
-            objEst.Valores = new List<object>() { bDatos };
-            objEst.Tabla = "Tablas";
-
-            Operaciones objOp = new Operaciones();
-            objOp.Elemento = objEst;
-
             DataTable tablas = new DataTable();
-            tablas = objOp.ObtenerDtt();
+            tablas = Campo.LlamarCampos(bd);
 
             for (int i = 0; i < tablas.Rows.Count; i++)
             {

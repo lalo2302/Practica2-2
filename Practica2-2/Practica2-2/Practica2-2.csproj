@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Campo.cs" />
     <Compile Include="Clases\Estructura.cs" />
     <Compile Include="Clases\Operaciones.cs" />
+    <Compile Include="Clases\Tabla.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
