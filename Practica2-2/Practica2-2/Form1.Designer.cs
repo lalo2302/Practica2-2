@@ -122,6 +122,7 @@
             // 
             // gboxInt
             // 
+            this.gboxInt.Controls.Add(this.gboxString);
             this.gboxInt.Controls.Add(this.btnApFiltroI);
             this.gboxInt.Controls.Add(this.btnNingunoI);
             this.gboxInt.Controls.Add(this.chDif);
@@ -140,7 +141,7 @@
             this.gboxInt.Controls.Add(this.txtMayor);
             this.gboxInt.Controls.Add(this.lblCampo2);
             this.gboxInt.Controls.Add(this.lblCampo1);
-            this.gboxInt.Location = new System.Drawing.Point(230, 50);
+            this.gboxInt.Location = new System.Drawing.Point(230, 52);
             this.gboxInt.Name = "gboxInt";
             this.gboxInt.Size = new System.Drawing.Size(174, 164);
             this.gboxInt.TabIndex = 5;
@@ -329,7 +330,7 @@
             this.gboxString.Controls.Add(this.txtCamp1);
             this.gboxString.Controls.Add(this.lblCamp2);
             this.gboxString.Controls.Add(this.lblCamp1);
-            this.gboxString.Location = new System.Drawing.Point(228, 187);
+            this.gboxString.Location = new System.Drawing.Point(0, 0);
             this.gboxString.Name = "gboxString";
             this.gboxString.Size = new System.Drawing.Size(174, 166);
             this.gboxString.TabIndex = 18;
@@ -568,7 +569,6 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvRes);
             this.Controls.Add(this.lblQuery);
-            this.Controls.Add(this.gboxString);
             this.Controls.Add(this.chlstCol);
             this.Controls.Add(this.gboxInt);
             this.Controls.Add(this.lblFiltro);
