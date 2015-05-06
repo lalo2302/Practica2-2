@@ -329,7 +329,7 @@
             this.gboxString.Controls.Add(this.txtCamp1);
             this.gboxString.Controls.Add(this.lblCamp2);
             this.gboxString.Controls.Add(this.lblCamp1);
-            this.gboxString.Location = new System.Drawing.Point(230, 50);
+            this.gboxString.Location = new System.Drawing.Point(228, 187);
             this.gboxString.Name = "gboxString";
             this.gboxString.Size = new System.Drawing.Size(174, 166);
             this.gboxString.TabIndex = 18;
