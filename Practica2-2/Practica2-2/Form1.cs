@@ -18,6 +18,7 @@ namespace Practica2_2
         Tabla Tabla = new Tabla();
         static string baseDatos;
         static string tabla;
+        static string query = "";
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace Practica2_2
                 {
                     lstTablas.Items.Add(Tabla.Tablas[i]);
                 }
+                GenerarQuery("*", "bd");
             }
             catch (Exception ex)
             {
@@ -52,6 +54,7 @@ namespace Practica2_2
             {
                 chlstCol.Items.Add(camp.Nombre);
             }
+            GenerarQuery(tabla, "tab");
         }
 
         private void btnCol_Click(object sender, EventArgs e)
@@ -67,6 +70,10 @@ namespace Practica2_2
                         {
                             Campo.Campos.RemoveAt(j);
                         }
+            for (int i = 0; i < Campo.Campos.Count; i++)
+            {
+                GenerarQuery(Campo.Campos[i].Nombre, "camp");
+            }
 
             string nom = Campo.Campos[0].Nombre;
             if (Campo.Campos[0].Tipo == "nvarchar")
@@ -84,6 +91,31 @@ namespace Practica2_2
                 lblCampo3.Text = nom;
                 lblCampo4.Text = nom;
             }
+        }
+
+        private void GenerarQuery(string txt, string paso)
+        {
+            if (paso == "bd")
+            {
+                query = string.Empty;
+                query += "SELECT " + txt;
+                lblQuery.Text = query;
+            }
+            else if (paso == "tab")
+            {
+                GenerarQuery("*", "bd");
+                query += " FROM " + txt;
+                lblQuery.Text = query;
+            }
+            else if (paso == "camp")
+            {
+                if (query.Contains('*'))
+                    query = query.Replace("*", "," + txt);
+                else
+                    query = query.Insert(query.IndexOf(","), "," + txt);
+                lblQuery.Text = query.Remove(query.IndexOf(','), 1);
+            }
+            
         }
     }
 }
