@@ -51,26 +51,10 @@ namespace Practica2_2
             Cnombre.Clear();
             Ctipo.Clear();
             string tabla = lstTablas.SelectedItem.ToString();
-            Estructura objEst = new Estructura();
-            string bDatos = baseDatos;
-            objEst.Sentencia = string.Format("use {0} SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{1}'", bDatos, tabla);
-            objEst.Parametros = new SqlParameter[] { };
-            objEst.Valores = new List<object>() { };
-            objEst.Tabla = "Columnas";
-
-            Operaciones objOp = new Operaciones();
-            objOp.Elemento = objEst;
-
-            DataTable columnas = new DataTable();
-            columnas = objOp.ObtenerDtt();
-            for (int i = 0; i < columnas.Rows.Count; i++)
+            Campo.LlamarCampos(tabla, baseDatos);
+            foreach (Campo camp in Campo.Campos)
             {
-                Cnombre.Add(columnas.Rows[i]["COLUMN_NAME"].ToString());
-                Ctipo.Add(columnas.Rows[i]["DATA_TYPE"].ToString());
-            }
-            for (int i = 0; i < Cnombre.Count; i++)
-            {
-                chlstCol.Items.Add(Cnombre[i]);
+                chlstCol.Items.Add(camp.Nombre);
             }
         }
 

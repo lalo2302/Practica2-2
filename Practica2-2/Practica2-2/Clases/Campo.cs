@@ -10,6 +10,13 @@ namespace Practica2_2.Clases
     public class Campo
     {
         private static List<Campo> campos = new List<Campo>();
+
+        public static List<Campo> Campos
+        {
+            get { return Campo.campos; }
+            set { Campo.campos = value; }
+        }
+
         #region ATRIBUTOS
         private string nombre;
 
@@ -34,16 +41,19 @@ namespace Practica2_2.Clases
         }
         #endregion
 
-        #region METODOS
-        public static List<string> LlamarLista()
+        #region CONSTRUCTORES
+        public Campo()
         {
-            List<string> nombres = new List<string>();
-            foreach (Campo item in campos)
-            {
-                nombres.Add(item.nombre);
-            }
-            return nombres;
+
         }
+        public Campo(string nom, string tip)
+        {
+            nombre = nom;
+            tipo = tip;
+        }
+        #endregion
+
+        #region METODOS
         public void SeleccionarCampos(int pos)
         {
             campos.RemoveAt(pos);
@@ -54,9 +64,25 @@ namespace Practica2_2.Clases
 
         }
 
-        public void LlamarCampos()
+        public void LlamarCampos(string tab, string bd)
         {
-           
+            campos.Clear();
+            Estructura objEst = new Estructura();
+            objEst.Sentencia = string.Format("use {0} SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{1}'", bd, tab);
+            objEst.Parametros = new SqlParameter[] { };
+            objEst.Valores = new List<object>() { };
+            objEst.Tabla = "Columnas";
+
+            Operaciones objOp = new Operaciones();
+            objOp.Elemento = objEst;
+
+            DataTable columnas = new DataTable();
+            columnas = objOp.ObtenerDtt();
+            for (int i = 0; i < columnas.Rows.Count; i++)
+            {
+                Campo ca = new Campo(columnas.Rows[i]["COLUMN_NAME"].ToString(), columnas.Rows[i]["DATA_TYPE"].ToString());
+                campos.Add(ca);
+            }
         }
         #endregion
     }
