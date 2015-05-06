@@ -41,8 +41,8 @@
             this.chMenor = new System.Windows.Forms.CheckBox();
             this.chMayor = new System.Windows.Forms.CheckBox();
             this.lblDif = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCampo4 = new System.Windows.Forms.Label();
+            this.lblCampo3 = new System.Windows.Forms.Label();
             this.lblIgual = new System.Windows.Forms.Label();
             this.txtDif = new System.Windows.Forms.TextBox();
             this.txtIgual = new System.Windows.Forms.TextBox();
@@ -129,8 +129,8 @@
             this.gboxInt.Controls.Add(this.chMenor);
             this.gboxInt.Controls.Add(this.chMayor);
             this.gboxInt.Controls.Add(this.lblDif);
-            this.gboxInt.Controls.Add(this.label2);
-            this.gboxInt.Controls.Add(this.label1);
+            this.gboxInt.Controls.Add(this.lblCampo4);
+            this.gboxInt.Controls.Add(this.lblCampo3);
             this.gboxInt.Controls.Add(this.lblIgual);
             this.gboxInt.Controls.Add(this.txtDif);
             this.gboxInt.Controls.Add(this.txtIgual);
@@ -210,23 +210,23 @@
             this.lblDif.TabIndex = 13;
             this.lblDif.Text = "!=";
             // 
-            // label2
+            // lblCampo4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "[Campo]";
+            this.lblCampo4.AutoSize = true;
+            this.lblCampo4.Location = new System.Drawing.Point(6, 114);
+            this.lblCampo4.Name = "lblCampo4";
+            this.lblCampo4.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo4.TabIndex = 12;
+            this.lblCampo4.Text = "[Campo]";
             // 
-            // label1
+            // lblCampo3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "[Campo]";
+            this.lblCampo3.AutoSize = true;
+            this.lblCampo3.Location = new System.Drawing.Point(6, 88);
+            this.lblCampo3.Name = "lblCampo3";
+            this.lblCampo3.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo3.TabIndex = 11;
+            this.lblCampo3.Text = "[Campo]";
             // 
             // lblIgual
             // 
@@ -329,7 +329,7 @@
             this.gboxString.Controls.Add(this.txtCamp1);
             this.gboxString.Controls.Add(this.lblCamp2);
             this.gboxString.Controls.Add(this.lblCamp1);
-            this.gboxString.Location = new System.Drawing.Point(230, 50);
+            this.gboxString.Location = new System.Drawing.Point(228, 187);
             this.gboxString.Name = "gboxString";
             this.gboxString.Size = new System.Drawing.Size(174, 166);
             this.gboxString.TabIndex = 18;
@@ -604,8 +604,8 @@
         private System.Windows.Forms.CheckBox chMenor;
         private System.Windows.Forms.CheckBox chMayor;
         private System.Windows.Forms.Label lblDif;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCampo4;
+        private System.Windows.Forms.Label lblCampo3;
         private System.Windows.Forms.Label lblIgual;
         private System.Windows.Forms.TextBox txtDif;
         private System.Windows.Forms.TextBox txtIgual;
