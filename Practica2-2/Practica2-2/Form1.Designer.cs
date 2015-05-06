@@ -553,6 +553,7 @@
             this.btnCol.TabIndex = 24;
             this.btnCol.Text = "Aplicar Columnas";
             this.btnCol.UseVisualStyleBackColor = true;
+            this.btnCol.Click += new System.EventHandler(this.btnCol_Click);
             // 
             // Form1
             // 

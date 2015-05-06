@@ -64,8 +64,8 @@ namespace Practica2_2
 
             for (int i = 0; i < count; i++)
                 if (!(chlstCol.GetItemChecked(i)))
-                    for (int j = 0; j < Cnombre.Count; j++)
-                        if (chlstCol.Items[i].ToString() == Cnombre[j])
+                    for (int j = 0; j < Campo.Campos.Count; j++)
+                        if (chlstCol.Items[i].ToString() == Campo.Campos[j].Nombre)
                         {
                             Campo.SeleccionarCampos(j);
                         }
