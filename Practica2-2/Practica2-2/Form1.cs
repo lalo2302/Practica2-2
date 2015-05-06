@@ -60,6 +60,7 @@ namespace Practica2_2
 
         private void btnCol_Click(object sender, EventArgs e)
         {
+
             int count = chlstCol.Items.Count;
 
             for (int i = 0; i < count; i++)
@@ -67,8 +68,25 @@ namespace Practica2_2
                     for (int j = 0; j < Campo.Campos.Count; j++)
                         if (chlstCol.Items[i].ToString() == Campo.Campos[j].Nombre)
                         {
-                            Campo.SeleccionarCampos(j);
+                            Campo.Campos.RemoveAt(j);
                         }
+
+            string nom = Campo.Campos[0].Nombre;
+            if (Campo.Campos[0].Tipo == "nvarchar")
+            {
+                lblCamp1.Text = nom;
+                lblCamp2.Text = nom;
+                lblCamp3.Text = nom;
+                lblCamp4.Text = nom;
+            }
+
+            else
+            {
+                lblCampo1.Text = nom;
+                lblCampo2.Text = nom;
+                lblCampo3.Text = nom;
+                lblCampo4.Text = nom;
+            }
         }
     }
 }

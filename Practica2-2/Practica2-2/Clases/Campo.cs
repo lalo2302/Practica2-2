@@ -9,6 +9,7 @@ namespace Practica2_2.Clases
 {
     public class Campo
     {
+        private static int count = 0;
         private static List<Campo> campos = new List<Campo>();
 
         public static List<Campo> Campos
@@ -54,14 +55,10 @@ namespace Practica2_2.Clases
         #endregion
 
         #region METODOS
-        public void SeleccionarCampos(int pos)
-        {
-            campos.RemoveAt(pos);
-        }
 
         public void AplicarFiltros()
         {
-
+           
         }
 
         public void LlamarCampos(string tab, string bd)
