@@ -17,9 +17,7 @@ namespace Practica2_2
         Campo Campo = new Campo();
         Tabla Tabla = new Tabla();
         static string baseDatos;
-        //Lista de las columnas con sus tipos
-        static List<string> Cnombre = new List<string>();
-        static List<string> Ctipo = new List<string>();
+        static string tabla;
         public Form1()
         {
             InitializeComponent();
@@ -48,9 +46,7 @@ namespace Practica2_2
         private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
         {
             chlstCol.Items.Clear();
-            Cnombre.Clear();
-            Ctipo.Clear();
-            string tabla = lstTablas.SelectedItem.ToString();
+            tabla = lstTablas.SelectedItem.ToString();
             Campo.LlamarCampos(tabla, baseDatos);
             foreach (Campo camp in Campo.Campos)
             {
@@ -60,7 +56,8 @@ namespace Practica2_2
 
         private void btnCol_Click(object sender, EventArgs e)
         {
-
+            Campo.Campos.Clear();
+            Campo.LlamarCampos(tabla, baseDatos);
             int count = chlstCol.Items.Count;
 
             for (int i = 0; i < count; i++)
