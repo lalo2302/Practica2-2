@@ -143,14 +143,14 @@
             this.gboxInt.Controls.Add(this.lblCampo1);
             this.gboxInt.Location = new System.Drawing.Point(230, 52);
             this.gboxInt.Name = "gboxInt";
-            this.gboxInt.Size = new System.Drawing.Size(174, 164);
+            this.gboxInt.Size = new System.Drawing.Size(215, 164);
             this.gboxInt.TabIndex = 5;
             this.gboxInt.TabStop = false;
             this.gboxInt.Text = "Número";
             // 
             // btnApFiltroI
             // 
-            this.btnApFiltroI.Location = new System.Drawing.Point(123, 10);
+            this.btnApFiltroI.Location = new System.Drawing.Point(160, 10);
             this.btnApFiltroI.Name = "btnApFiltroI";
             this.btnApFiltroI.Size = new System.Drawing.Size(49, 23);
             this.btnApFiltroI.TabIndex = 26;
@@ -159,7 +159,7 @@
             // 
             // btnNingunoI
             // 
-            this.btnNingunoI.Location = new System.Drawing.Point(77, 135);
+            this.btnNingunoI.Location = new System.Drawing.Point(146, 138);
             this.btnNingunoI.Name = "btnNingunoI";
             this.btnNingunoI.Size = new System.Drawing.Size(63, 23);
             this.btnNingunoI.TabIndex = 26;
@@ -169,7 +169,7 @@
             // chDif
             // 
             this.chDif.AutoSize = true;
-            this.chDif.Location = new System.Drawing.Point(111, 115);
+            this.chDif.Location = new System.Drawing.Point(180, 118);
             this.chDif.Name = "chDif";
             this.chDif.Size = new System.Drawing.Size(15, 14);
             this.chDif.TabIndex = 17;
@@ -178,7 +178,7 @@
             // chIgual
             // 
             this.chIgual.AutoSize = true;
-            this.chIgual.Location = new System.Drawing.Point(111, 89);
+            this.chIgual.Location = new System.Drawing.Point(180, 92);
             this.chIgual.Name = "chIgual";
             this.chIgual.Size = new System.Drawing.Size(15, 14);
             this.chIgual.TabIndex = 16;
@@ -187,7 +187,7 @@
             // chMenor
             // 
             this.chMenor.AutoSize = true;
-            this.chMenor.Location = new System.Drawing.Point(111, 62);
+            this.chMenor.Location = new System.Drawing.Point(180, 65);
             this.chMenor.Name = "chMenor";
             this.chMenor.Size = new System.Drawing.Size(15, 14);
             this.chMenor.TabIndex = 15;
@@ -196,7 +196,7 @@
             // chMayor
             // 
             this.chMayor.AutoSize = true;
-            this.chMayor.Location = new System.Drawing.Point(111, 36);
+            this.chMayor.Location = new System.Drawing.Point(180, 39);
             this.chMayor.Name = "chMayor";
             this.chMayor.Size = new System.Drawing.Size(15, 14);
             this.chMayor.TabIndex = 14;
@@ -205,7 +205,7 @@
             // lblDif
             // 
             this.lblDif.AutoSize = true;
-            this.lblDif.Location = new System.Drawing.Point(55, 114);
+            this.lblDif.Location = new System.Drawing.Point(124, 117);
             this.lblDif.Name = "lblDif";
             this.lblDif.Size = new System.Drawing.Size(16, 13);
             this.lblDif.TabIndex = 13;
@@ -232,7 +232,7 @@
             // lblIgual
             // 
             this.lblIgual.AutoSize = true;
-            this.lblIgual.Location = new System.Drawing.Point(58, 88);
+            this.lblIgual.Location = new System.Drawing.Point(127, 91);
             this.lblIgual.Name = "lblIgual";
             this.lblIgual.Size = new System.Drawing.Size(13, 13);
             this.lblIgual.TabIndex = 10;
@@ -240,21 +240,21 @@
             // 
             // txtDif
             // 
-            this.txtDif.Location = new System.Drawing.Point(77, 111);
+            this.txtDif.Location = new System.Drawing.Point(146, 114);
             this.txtDif.Name = "txtDif";
             this.txtDif.Size = new System.Drawing.Size(28, 20);
             this.txtDif.TabIndex = 9;
             // 
             // txtIgual
             // 
-            this.txtIgual.Location = new System.Drawing.Point(77, 85);
+            this.txtIgual.Location = new System.Drawing.Point(146, 88);
             this.txtIgual.Name = "txtIgual";
             this.txtIgual.Size = new System.Drawing.Size(28, 20);
             this.txtIgual.TabIndex = 8;
             // 
             // txtMenor
             // 
-            this.txtMenor.Location = new System.Drawing.Point(77, 59);
+            this.txtMenor.Location = new System.Drawing.Point(146, 62);
             this.txtMenor.Name = "txtMenor";
             this.txtMenor.Size = new System.Drawing.Size(28, 20);
             this.txtMenor.TabIndex = 7;
@@ -262,7 +262,7 @@
             // lblMenor
             // 
             this.lblMenor.AutoSize = true;
-            this.lblMenor.Location = new System.Drawing.Point(58, 62);
+            this.lblMenor.Location = new System.Drawing.Point(127, 65);
             this.lblMenor.Name = "lblMenor";
             this.lblMenor.Size = new System.Drawing.Size(13, 13);
             this.lblMenor.TabIndex = 6;
@@ -271,7 +271,7 @@
             // lblMayor
             // 
             this.lblMayor.AutoSize = true;
-            this.lblMayor.Location = new System.Drawing.Point(58, 36);
+            this.lblMayor.Location = new System.Drawing.Point(127, 39);
             this.lblMayor.Name = "lblMayor";
             this.lblMayor.Size = new System.Drawing.Size(13, 13);
             this.lblMayor.TabIndex = 5;
@@ -279,7 +279,7 @@
             // 
             // txtMayor
             // 
-            this.txtMayor.Location = new System.Drawing.Point(77, 33);
+            this.txtMayor.Location = new System.Drawing.Point(146, 36);
             this.txtMayor.Name = "txtMayor";
             this.txtMayor.Size = new System.Drawing.Size(28, 20);
             this.txtMayor.TabIndex = 4;
@@ -332,14 +332,14 @@
             this.gboxString.Controls.Add(this.lblCamp1);
             this.gboxString.Location = new System.Drawing.Point(0, 0);
             this.gboxString.Name = "gboxString";
-            this.gboxString.Size = new System.Drawing.Size(174, 166);
+            this.gboxString.Size = new System.Drawing.Size(215, 166);
             this.gboxString.TabIndex = 18;
             this.gboxString.TabStop = false;
             this.gboxString.Text = "Texto";
             // 
             // btnApFiltroS
             // 
-            this.btnApFiltroS.Location = new System.Drawing.Point(118, 8);
+            this.btnApFiltroS.Location = new System.Drawing.Point(157, 7);
             this.btnApFiltroS.Name = "btnApFiltroS";
             this.btnApFiltroS.Size = new System.Drawing.Size(49, 23);
             this.btnApFiltroS.TabIndex = 24;
@@ -348,7 +348,7 @@
             // 
             // btnNingunoS
             // 
-            this.btnNingunoS.Location = new System.Drawing.Point(95, 137);
+            this.btnNingunoS.Location = new System.Drawing.Point(134, 136);
             this.btnNingunoS.Name = "btnNingunoS";
             this.btnNingunoS.Size = new System.Drawing.Size(73, 23);
             this.btnNingunoS.TabIndex = 25;
@@ -358,7 +358,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(153, 117);
+            this.checkBox1.Location = new System.Drawing.Point(192, 116);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 17;
@@ -367,7 +367,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(153, 91);
+            this.checkBox2.Location = new System.Drawing.Point(192, 90);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 16;
@@ -376,7 +376,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(153, 64);
+            this.checkBox3.Location = new System.Drawing.Point(192, 63);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(15, 14);
             this.checkBox3.TabIndex = 15;
@@ -385,7 +385,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(153, 38);
+            this.checkBox4.Location = new System.Drawing.Point(192, 37);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(15, 14);
             this.checkBox4.TabIndex = 14;
@@ -394,7 +394,7 @@
             // lblIgualS
             // 
             this.lblIgualS.AutoSize = true;
-            this.lblIgualS.Location = new System.Drawing.Point(66, 117);
+            this.lblIgualS.Location = new System.Drawing.Point(105, 116);
             this.lblIgualS.Name = "lblIgualS";
             this.lblIgualS.Size = new System.Drawing.Size(13, 13);
             this.lblIgualS.TabIndex = 13;
@@ -421,7 +421,7 @@
             // lblCont
             // 
             this.lblCont.AutoSize = true;
-            this.lblCont.Location = new System.Drawing.Point(59, 90);
+            this.lblCont.Location = new System.Drawing.Point(98, 89);
             this.lblCont.Name = "lblCont";
             this.lblCont.Size = new System.Drawing.Size(28, 13);
             this.lblCont.TabIndex = 10;
@@ -429,21 +429,21 @@
             // 
             // txtCamp4
             // 
-            this.txtCamp4.Location = new System.Drawing.Point(95, 113);
+            this.txtCamp4.Location = new System.Drawing.Point(134, 112);
             this.txtCamp4.Name = "txtCamp4";
             this.txtCamp4.Size = new System.Drawing.Size(52, 20);
             this.txtCamp4.TabIndex = 9;
             // 
             // txtCamp3
             // 
-            this.txtCamp3.Location = new System.Drawing.Point(95, 87);
+            this.txtCamp3.Location = new System.Drawing.Point(134, 86);
             this.txtCamp3.Name = "txtCamp3";
             this.txtCamp3.Size = new System.Drawing.Size(52, 20);
             this.txtCamp3.TabIndex = 8;
             // 
             // txtCamp2
             // 
-            this.txtCamp2.Location = new System.Drawing.Point(95, 61);
+            this.txtCamp2.Location = new System.Drawing.Point(134, 60);
             this.txtCamp2.Name = "txtCamp2";
             this.txtCamp2.Size = new System.Drawing.Size(52, 20);
             this.txtCamp2.TabIndex = 7;
@@ -451,7 +451,7 @@
             // lblTer
             // 
             this.lblTer.AutoSize = true;
-            this.lblTer.Location = new System.Drawing.Point(62, 64);
+            this.lblTer.Location = new System.Drawing.Point(101, 63);
             this.lblTer.Name = "lblTer";
             this.lblTer.Size = new System.Drawing.Size(20, 13);
             this.lblTer.TabIndex = 6;
@@ -460,7 +460,7 @@
             // lblEmp
             // 
             this.lblEmp.AutoSize = true;
-            this.lblEmp.Location = new System.Drawing.Point(64, 38);
+            this.lblEmp.Location = new System.Drawing.Point(103, 37);
             this.lblEmp.Name = "lblEmp";
             this.lblEmp.Size = new System.Drawing.Size(20, 13);
             this.lblEmp.TabIndex = 5;
@@ -468,7 +468,7 @@
             // 
             // txtCamp1
             // 
-            this.txtCamp1.Location = new System.Drawing.Point(95, 35);
+            this.txtCamp1.Location = new System.Drawing.Point(134, 34);
             this.txtCamp1.Name = "txtCamp1";
             this.txtCamp1.Size = new System.Drawing.Size(52, 20);
             this.txtCamp1.TabIndex = 4;
@@ -508,12 +508,12 @@
             this.dgvRes.Location = new System.Drawing.Point(12, 255);
             this.dgvRes.Name = "dgvRes";
             this.dgvRes.ReadOnly = true;
-            this.dgvRes.Size = new System.Drawing.Size(392, 102);
+            this.dgvRes.Size = new System.Drawing.Size(433, 102);
             this.dgvRes.TabIndex = 20;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(352, 222);
+            this.btnBuscar.Location = new System.Drawing.Point(393, 222);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 23);
             this.btnBuscar.TabIndex = 21;
@@ -561,7 +561,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(420, 369);
+            this.ClientSize = new System.Drawing.Size(457, 369);
             this.Controls.Add(this.btnCol);
             this.Controls.Add(this.btnBd);
             this.Controls.Add(this.txtBd);
