@@ -34,6 +34,8 @@
             this.lblCol = new System.Windows.Forms.Label();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.gboxInt = new System.Windows.Forms.GroupBox();
+            this.btnApFiltroI = new System.Windows.Forms.Button();
+            this.btnNingunoI = new System.Windows.Forms.Button();
             this.chDif = new System.Windows.Forms.CheckBox();
             this.chIgual = new System.Windows.Forms.CheckBox();
             this.chMenor = new System.Windows.Forms.CheckBox();
@@ -52,6 +54,8 @@
             this.lblCampo1 = new System.Windows.Forms.Label();
             this.chlstCol = new System.Windows.Forms.CheckedListBox();
             this.gboxString = new System.Windows.Forms.GroupBox();
+            this.btnApFiltroS = new System.Windows.Forms.Button();
+            this.btnNingunoS = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -74,10 +78,7 @@
             this.lblBd = new System.Windows.Forms.Label();
             this.txtBd = new System.Windows.Forms.TextBox();
             this.btnBd = new System.Windows.Forms.Button();
-            this.btnApFiltroS = new System.Windows.Forms.Button();
-            this.btnNingunoS = new System.Windows.Forms.Button();
-            this.btnNingunoI = new System.Windows.Forms.Button();
-            this.btnApFiltroI = new System.Windows.Forms.Button();
+            this.btnCol = new System.Windows.Forms.Button();
             this.gboxInt.SuspendLayout();
             this.gboxString.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).BeginInit();
@@ -145,6 +146,24 @@
             this.gboxInt.TabIndex = 5;
             this.gboxInt.TabStop = false;
             this.gboxInt.Text = "Número";
+            // 
+            // btnApFiltroI
+            // 
+            this.btnApFiltroI.Location = new System.Drawing.Point(123, 10);
+            this.btnApFiltroI.Name = "btnApFiltroI";
+            this.btnApFiltroI.Size = new System.Drawing.Size(49, 23);
+            this.btnApFiltroI.TabIndex = 26;
+            this.btnApFiltroI.Text = "Aplicar";
+            this.btnApFiltroI.UseVisualStyleBackColor = true;
+            // 
+            // btnNingunoI
+            // 
+            this.btnNingunoI.Location = new System.Drawing.Point(77, 135);
+            this.btnNingunoI.Name = "btnNingunoI";
+            this.btnNingunoI.Size = new System.Drawing.Size(63, 23);
+            this.btnNingunoI.TabIndex = 26;
+            this.btnNingunoI.Text = "Ninguno";
+            this.btnNingunoI.UseVisualStyleBackColor = true;
             // 
             // chDif
             // 
@@ -316,6 +335,24 @@
             this.gboxString.TabIndex = 18;
             this.gboxString.TabStop = false;
             this.gboxString.Text = "Texto";
+            // 
+            // btnApFiltroS
+            // 
+            this.btnApFiltroS.Location = new System.Drawing.Point(118, 8);
+            this.btnApFiltroS.Name = "btnApFiltroS";
+            this.btnApFiltroS.Size = new System.Drawing.Size(49, 23);
+            this.btnApFiltroS.TabIndex = 24;
+            this.btnApFiltroS.Text = "Aplicar";
+            this.btnApFiltroS.UseVisualStyleBackColor = true;
+            // 
+            // btnNingunoS
+            // 
+            this.btnNingunoS.Location = new System.Drawing.Point(95, 137);
+            this.btnNingunoS.Name = "btnNingunoS";
+            this.btnNingunoS.Size = new System.Drawing.Size(73, 23);
+            this.btnNingunoS.TabIndex = 25;
+            this.btnNingunoS.Text = "Ninguno";
+            this.btnNingunoS.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -508,41 +545,14 @@
             this.btnBd.UseVisualStyleBackColor = true;
             this.btnBd.Click += new System.EventHandler(this.btnBd_Click);
             // 
-            // btnApFiltroS
+            // btnCol
             // 
-            this.btnApFiltroS.Location = new System.Drawing.Point(118, 8);
-            this.btnApFiltroS.Name = "btnApFiltroS";
-            this.btnApFiltroS.Size = new System.Drawing.Size(49, 23);
-            this.btnApFiltroS.TabIndex = 24;
-            this.btnApFiltroS.Text = "Aplicar";
-            this.btnApFiltroS.UseVisualStyleBackColor = true;
-            // 
-            // btnNingunoS
-            // 
-            this.btnNingunoS.Location = new System.Drawing.Point(95, 137);
-            this.btnNingunoS.Name = "btnNingunoS";
-            this.btnNingunoS.Size = new System.Drawing.Size(73, 23);
-            this.btnNingunoS.TabIndex = 25;
-            this.btnNingunoS.Text = "Ninguno";
-            this.btnNingunoS.UseVisualStyleBackColor = true;
-            // 
-            // btnNingunoI
-            // 
-            this.btnNingunoI.Location = new System.Drawing.Point(77, 135);
-            this.btnNingunoI.Name = "btnNingunoI";
-            this.btnNingunoI.Size = new System.Drawing.Size(63, 23);
-            this.btnNingunoI.TabIndex = 26;
-            this.btnNingunoI.Text = "Ninguno";
-            this.btnNingunoI.UseVisualStyleBackColor = true;
-            // 
-            // btnApFiltroI
-            // 
-            this.btnApFiltroI.Location = new System.Drawing.Point(123, 10);
-            this.btnApFiltroI.Name = "btnApFiltroI";
-            this.btnApFiltroI.Size = new System.Drawing.Size(49, 23);
-            this.btnApFiltroI.TabIndex = 26;
-            this.btnApFiltroI.Text = "Aplicar";
-            this.btnApFiltroI.UseVisualStyleBackColor = true;
+            this.btnCol.Location = new System.Drawing.Point(104, 181);
+            this.btnCol.Name = "btnCol";
+            this.btnCol.Size = new System.Drawing.Size(120, 27);
+            this.btnCol.TabIndex = 24;
+            this.btnCol.Text = "Aplicar Columnas";
+            this.btnCol.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -550,6 +560,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(420, 369);
+            this.Controls.Add(this.btnCol);
             this.Controls.Add(this.btnBd);
             this.Controls.Add(this.txtBd);
             this.Controls.Add(this.lblBd);
@@ -628,6 +639,7 @@
         private System.Windows.Forms.Button btnNingunoI;
         private System.Windows.Forms.Button btnNingunoS;
         private System.Windows.Forms.Button btnApFiltroI;
+        private System.Windows.Forms.Button btnCol;
     }
 }
 
