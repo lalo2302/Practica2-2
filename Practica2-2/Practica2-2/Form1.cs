@@ -32,12 +32,10 @@ namespace Practica2_2
             {
                 lstTablas.Items.Clear();
                 chlstCol.Items.Clear();
-                DataTable tablas = new DataTable();
-                tablas = Campo.LlamarCampos(baseDatos);
-
-                for (int i = 0; i < tablas.Rows.Count; i++)
+                Tabla.LlamarTablas(baseDatos);
+                for (int i = 0; i < Tabla.Tablas.Count; i++)
                 {
-                    lstTablas.Items.Add(tablas.Rows[i]["name"]);
+                    lstTablas.Items.Add(Tabla.Tablas[i]);
                 }
             }
             catch (Exception ex)

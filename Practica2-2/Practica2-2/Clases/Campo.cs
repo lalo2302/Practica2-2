@@ -54,23 +54,9 @@ namespace Practica2_2.Clases
 
         }
 
-        public DataTable LlamarCampos(string bd)
+        public void LlamarCampos()
         {
-            string bDatos = bd;
-            Estructura objEst = new Estructura();
-            objEst.Sentencia = string.Format("use {0} SELECT name FROM sys.tables", bDatos);
-            objEst.Parametros = new SqlParameter[] { 
-            };
-            objEst.Valores = new List<object>() { };
-            objEst.Tabla = "Tablas";
-
-            Operaciones objOp = new Operaciones();
-            objOp.Elemento = objEst;
-
-            DataTable tablas = new DataTable();
-            tablas = objOp.ObtenerDtt();
-
-            return tablas;
+           
         }
         #endregion
     }
