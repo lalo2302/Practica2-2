@@ -67,8 +67,7 @@ namespace Practica2_2
                     for (int j = 0; j < Cnombre.Count; j++)
                         if (chlstCol.Items[i].ToString() == Cnombre[j])
                         {
-                            Cnombre.RemoveAt(j);
-                            Ctipo.RemoveAt(j);
+                            Campo.SeleccionarCampos(j);
                         }
         }
     }
