@@ -20,7 +20,12 @@ namespace Practica2_2
         static string baseDatos;
         static string tabla;
         static string query = "";
+        static string queryParam = "";
         static int filtroCount = 0;
+        static string columnas;
+        static string filtros;
+        static string filtrosParam;
+        static List<string> param = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -45,8 +50,8 @@ namespace Practica2_2
         {
             if (lblCampo1.Text != "[Campo]")
             {
-                string columnas = String.Empty;
-                string filtros = String.Empty;
+                columnas = String.Empty;
+                filtros = String.Empty;
                 int count = 0;
                 
                     if (check1.Checked)
@@ -55,6 +60,9 @@ namespace Practica2_2
                         if (txt1.Text != String.Empty)
                         {
                             filtros = "WHERE " + lblCampo1.Text + " > " + txt1.Text;
+                            filtrosParam = "WHERE " + lblCampo1.Text + " > @id ";
+                            param.Add("id");
+
                         }
                         count++;
                     }
@@ -63,14 +71,21 @@ namespace Practica2_2
                         if (count == 0)
                         {
                             if (txt2.Text != String.Empty)
+                            {
                                 filtros = "WHERE " + lblCampo2.Text + " LIKE '%" + txt2.Text + "%'";
+                                filtrosParam = "WHERE " + lblCampo2.Text + " LIKE '%@nombre%'";
+                                param.Add("nombre");
+                            }
 
                             columnas = lblCampo2.Text;
                         }
                         else
                         {
-                            if (txt2.Text != String.Empty)
+                            if (txt2.Text != String.Empty) {
                                 filtros += " AND " + lblCampo2.Text + " LIKE '%" + txt2.Text + "%'";
+                                filtrosParam += " AND " + lblCampo2.Text + " LIKE '%@nombre%'";
+                                param.Add("nombre");
+                                }
 
                             columnas += ", " + lblCampo2.Text;
                         }
@@ -81,14 +96,22 @@ namespace Practica2_2
                         if (count == 0)
                         {
                             if (txt3.Text != String.Empty)
+                            {
                                 filtros = "WHERE " + lblCampo3.Text + " = " + txt3.Text;
+                                filtrosParam = "WHERE " + lblCampo3.Text + " = @marca";
+                                param.Add("marca");
+                            }
 
                             columnas = lblCampo3.Text;
                         }
                         else
                         {
                             if (txt3.Text != String.Empty)
+                            {
                                 filtros += " AND " + lblCampo3.Text + " = " + txt3.Text;
+                                filtrosParam += " AND " + lblCampo3.Text + " = @marca";
+                                param.Add("marca");
+                            }
 
                             columnas += ", " + lblCampo3.Text;
                         }
@@ -99,14 +122,22 @@ namespace Practica2_2
                         if (count == 0)
                         {
                             if (txt4.Text != String.Empty)
+                            {
                                 filtros = "WHERE " + lblCampo4.Text + " LIKE '%" + txt4.Text + "'";
+                                filtrosParam = "WHERE " + lblCampo4.Text + " LIKE '%@color'";
+                                param.Add("color");
+                            }
 
                             columnas = lblCampo4.Text;
                         }
                         else
                         {
                             if (txt4.Text != String.Empty)
+                            {
                                 filtros += " AND " + lblCampo4.Text + " LIKE '%" + txt4.Text + "'";
+                                filtrosParam += " AND " + lblCampo4.Text + " LIKE '%@color'";
+                                param.Add("color");
+                            }
 
                             columnas += ", " + lblCampo4.Text;
                         }
@@ -116,6 +147,7 @@ namespace Practica2_2
                         columnas = "*";
 
                 query = string.Format("SELECT {0} FROM {1} {2}", columnas, tabla, filtros);
+                queryParam = string.Format("SELECT {0} FROM {1} {2}", columnas, tabla, filtros);
                 lblQuery.Text = query;
             }
 
@@ -181,7 +213,30 @@ namespace Practica2_2
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            
+            
+        }
 
+        private Estructura FormarEstructura()
+        {
+            Estructura objEst = new Estructura();
+            objEst.Sentencia = queryParam;
+            objEst.Parametros = new SqlParameter[filtroCount];
+
+            for (int i = 0; i < filtroCount; i++)
+            {
+                if (param[i].Contains("id"))
+                {
+                    objEst.Parametros[i] = new SqlParameter(param[i], SqlDbType.Int);
+                }
+                else
+                {
+                    objEst.Parametros[i] = new SqlParameter(param[i], SqlDbType.NVarChar, 50);
+                }
+            }
+            
+
+            return objEst;
         }
     }
 }
