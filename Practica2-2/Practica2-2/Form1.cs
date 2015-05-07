@@ -262,7 +262,7 @@ namespace Practica2_2
         private Estructura FormarEstructura()
         {
             Estructura objEst = new Estructura();
-            objEst.Sentencia = queryParam;
+            objEst.Sentencia = "use db_Practica22 " + queryParam;
             objEst.Parametros = new SqlParameter[filtroCount];
 
             for (int i = 0; i < filtroCount; i++)
