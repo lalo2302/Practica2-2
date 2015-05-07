@@ -73,21 +73,11 @@ namespace Practica2_2
             GenerarQuery("", "camp");
 
             string nom = Campo.Campos[0].Nombre;
-            if (Campo.Campos[0].Tipo == "nvarchar")
-            {
-                lblCamp1.Text = nom;
-                lblCamp2.Text = nom;
-                lblCamp3.Text = nom;
-                lblCamp4.Text = nom;
-            }
-
-            else
-            {
-                lblCampo1.Text = nom;
-                lblCampo2.Text = nom;
-                lblCampo3.Text = nom;
-                lblCampo4.Text = nom;
-            }
+            
+            lblCampo1.Text = nom;
+            lblCampo2.Text = nom;
+            lblCampo3.Text = nom;
+            lblCampo4.Text = nom;
         }
 
         private void GenerarQuery(string txt, string paso)
@@ -123,6 +113,11 @@ namespace Practica2_2
                 lblQuery.Text = query;
             }
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
