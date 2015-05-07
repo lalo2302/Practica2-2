@@ -32,10 +32,10 @@ namespace Practica2_2
             tabla = lstTablas.SelectedItem.ToString();
             Campo.LlamarCampos(tabla, baseDatos);
 
-            lblCampo1.Text = Campo.Campos[1].Nombre;
-            lblCampo2.Text = Campo.Campos[2].Nombre;
-            lblCampo3.Text = Campo.Campos[3].Nombre;
-            lblCampo4.Text = Campo.Campos[4].Nombre;
+            lblCampo1.Text = Campo.Campos[0].Nombre;
+            lblCampo2.Text = Campo.Campos[1].Nombre;
+            lblCampo3.Text = Campo.Campos[2].Nombre;
+            lblCampo4.Text = Campo.Campos[3].Nombre;
 
             GenerarQuery(tabla, "tab");
         }
@@ -76,7 +76,7 @@ namespace Practica2_2
         }
         private void LlamarTablas()
         {
-            baseDatos = "db_POO";
+            baseDatos = "db_Practica22";
             try
             {
                 lstTablas.Items.Clear();
