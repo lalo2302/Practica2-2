@@ -30,15 +30,18 @@ namespace Practica2_2
 
         private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tabla = lstTablas.SelectedItem.ToString();
-            Campo.LlamarCampos(tabla, baseDatos);
+            if (lstTablas.SelectedIndex != -1)
+            {
+                tabla = lstTablas.SelectedItem.ToString();
+                Campo.LlamarCampos(tabla, baseDatos);
 
-            lblCampo1.Text = Campo.Campos[0].Nombre;
-            lblCampo2.Text = Campo.Campos[1].Nombre;
-            lblCampo3.Text = Campo.Campos[2].Nombre;
-            lblCampo4.Text = Campo.Campos[3].Nombre;
+                lblCampo1.Text = Campo.Campos[0].Nombre;
+                lblCampo2.Text = Campo.Campos[1].Nombre;
+                lblCampo3.Text = Campo.Campos[2].Nombre;
+                lblCampo4.Text = Campo.Campos[3].Nombre;
 
-            GenerarQuery(tabla);
+                GenerarQuery(tabla);
+            }
         }
 
         private void GenerarQuery(string txt)
