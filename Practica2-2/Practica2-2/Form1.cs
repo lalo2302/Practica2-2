@@ -22,26 +22,7 @@ namespace Practica2_2
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void btnBd_Click(object sender, EventArgs e)
-        {
-            baseDatos = "Practica2-2";
-            try
-            {
-                lstTablas.Items.Clear();
-                chlstCol.Items.Clear();
-                Tabla.LlamarTablas(baseDatos);
-                for (int i = 0; i < Tabla.Tablas.Count; i++)
-                {
-                    lstTablas.Items.Add(Tabla.Tablas[i]);
-                }
-                GenerarQuery("*", "bd");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Esa base de datos no existe");
-            }
+            LlamarTablas();
         }
         
 
@@ -55,29 +36,6 @@ namespace Practica2_2
                 chlstCol.Items.Add(camp.Nombre);
             }
             GenerarQuery(tabla, "tab");
-        }
-
-        private void btnCol_Click(object sender, EventArgs e)
-        {
-            Campo.Campos.Clear();
-            Campo.LlamarCampos(tabla, baseDatos);
-            int count = chlstCol.Items.Count;
-
-            for (int i = 0; i < count; i++)
-                if (!(chlstCol.GetItemChecked(i)))
-                    for (int j = 0; j < Campo.Campos.Count; j++)
-                        if (chlstCol.Items[i].ToString() == Campo.Campos[j].Nombre)
-                        {
-                            Campo.Campos.RemoveAt(j);
-                        }
-            GenerarQuery("", "camp");
-
-            string nom = Campo.Campos[0].Nombre;
-            
-            lblCampo1.Text = nom;
-            lblCampo2.Text = nom;
-            lblCampo3.Text = nom;
-            lblCampo4.Text = nom;
         }
 
         private void GenerarQuery(string txt, string paso)
@@ -114,10 +72,24 @@ namespace Practica2_2
             }
             
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void LlamarTablas()
         {
-
+            baseDatos = "db_POO";
+            try
+            {
+                lstTablas.Items.Clear();
+                chlstCol.Items.Clear();
+                Tabla.LlamarTablas(baseDatos);
+                for (int i = 0; i < Tabla.Tablas.Count; i++)
+                {
+                    lstTablas.Items.Add(Tabla.Tablas[i]);
+                }
+                GenerarQuery("*", "bd");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Esa base de datos no existe");
+            }
         }
     }
 }
