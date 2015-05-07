@@ -63,14 +63,14 @@ namespace Practica2_2
                         if (count == 0)
                         {
                             if (txt2.Text != String.Empty)
-                                filtros = "WHERE " + lblCampo2.Text + " LIKE %" + txt2.Text + "%";
+                                filtros = "WHERE " + lblCampo2.Text + " LIKE '%" + txt2.Text + "%'";
 
                             columnas = lblCampo2.Text;
                         }
                         else
                         {
                             if (txt2.Text != String.Empty)
-                                filtros += " AND " + lblCampo2.Text + " LIKE %" + txt2.Text + "%";
+                                filtros += " AND " + lblCampo2.Text + " LIKE '%" + txt2.Text + "%'";
 
                             columnas += ", " + lblCampo2.Text;
                         }
@@ -99,14 +99,14 @@ namespace Practica2_2
                         if (count == 0)
                         {
                             if (txt4.Text != String.Empty)
-                                filtros = "WHERE " + lblCampo4.Text + " LIKE %" + txt4.Text;
+                                filtros = "WHERE " + lblCampo4.Text + " LIKE '%" + txt4.Text + "'";
 
                             columnas = lblCampo4.Text;
                         }
                         else
                         {
                             if (txt4.Text != String.Empty)
-                                filtros += " AND " + lblCampo4.Text + " LIKE %" + txt4.Text;
+                                filtros += " AND " + lblCampo4.Text + " LIKE '%" + txt4.Text + "'";
 
                             columnas += ", " + lblCampo4.Text;
                         }
