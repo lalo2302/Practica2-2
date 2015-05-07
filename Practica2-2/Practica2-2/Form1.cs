@@ -18,6 +18,7 @@ namespace Practica2_2
         Tabla Tabla = new Tabla();
         static string baseDatos;
         static string tabla;
+        static string query = "";
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Practica2_2
 
         private void btnBd_Click(object sender, EventArgs e)
         {
-            baseDatos = txtBd.Text;
+            baseDatos = "Practica2-2";
             try
             {
                 lstTablas.Items.Clear();
@@ -35,6 +36,7 @@ namespace Practica2_2
                 {
                     lstTablas.Items.Add(Tabla.Tablas[i]);
                 }
+                GenerarQuery("*", "bd");
             }
             catch (Exception ex)
             {
@@ -52,6 +54,7 @@ namespace Practica2_2
             {
                 chlstCol.Items.Add(camp.Nombre);
             }
+            GenerarQuery(tabla, "tab");
         }
 
         private void btnCol_Click(object sender, EventArgs e)
@@ -67,23 +70,54 @@ namespace Practica2_2
                         {
                             Campo.Campos.RemoveAt(j);
                         }
+            GenerarQuery("", "camp");
 
             string nom = Campo.Campos[0].Nombre;
-            if (Campo.Campos[0].Tipo == "nvarchar")
-            {
-                lblCamp1.Text = nom;
-                lblCamp2.Text = nom;
-                lblCamp3.Text = nom;
-                lblCamp4.Text = nom;
-            }
+            
+            lblCampo1.Text = nom;
+            lblCampo2.Text = nom;
+            lblCampo3.Text = nom;
+            lblCampo4.Text = nom;
+        }
 
-            else
+        private void GenerarQuery(string txt, string paso)
+        {
+            if (paso == "bd")
             {
-                lblCampo1.Text = nom;
-                lblCampo2.Text = nom;
-                lblCampo3.Text = nom;
-                lblCampo4.Text = nom;
+                query = string.Empty;
+                query += "SELECT " + txt;
+                lblQuery.Text = query;
             }
+            else if (paso == "tab")
+            {
+                GenerarQuery("*", "bd");
+                query += " FROM " + txt;
+                lblQuery.Text = query;
+            }
+            else if (paso == "camp")
+            {
+                string columnas = string.Empty;
+
+                for (int i = 0; i < Campo.Campos.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        columnas = Campo.Campos[i].Nombre;
+                    }
+                    else
+                    {
+                        columnas += "," + Campo.Campos[i].Nombre;
+                    }
+                }
+                query = string.Format("SELECT {0} FROM {1}", columnas, tabla);
+                lblQuery.Text = query;
+            }
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
