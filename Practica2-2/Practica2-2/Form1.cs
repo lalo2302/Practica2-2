@@ -26,7 +26,7 @@ namespace Practica2_2
 
         private void btnBd_Click(object sender, EventArgs e)
         {
-            baseDatos = txtBd.Text;
+            baseDatos = "Practica2-2";
             try
             {
                 lstTablas.Items.Clear();
@@ -70,10 +70,7 @@ namespace Practica2_2
                         {
                             Campo.Campos.RemoveAt(j);
                         }
-            for (int i = 0; i < Campo.Campos.Count; i++)
-            {
-                GenerarQuery(Campo.Campos[i].Nombre, "camp");
-            }
+            GenerarQuery("", "camp");
 
             string nom = Campo.Campos[0].Nombre;
             if (Campo.Campos[0].Tipo == "nvarchar")
@@ -109,11 +106,21 @@ namespace Practica2_2
             }
             else if (paso == "camp")
             {
-                if (query.Contains('*'))
-                    query = query.Replace("*", "," + txt);
-                else
-                    query = query.Insert(query.IndexOf(","), "," + txt);
-                lblQuery.Text = query.Remove(query.IndexOf(','), 1);
+                string columnas = string.Empty;
+
+                for (int i = 0; i < Campo.Campos.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        columnas = Campo.Campos[i].Nombre;
+                    }
+                    else
+                    {
+                        columnas += "," + Campo.Campos[i].Nombre;
+                    }
+                }
+                query = string.Format("SELECT {0} FROM {1}", columnas, tabla);
+                lblQuery.Text = query;
             }
             
         }

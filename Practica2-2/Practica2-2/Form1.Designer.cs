@@ -34,25 +34,6 @@
             this.lblCol = new System.Windows.Forms.Label();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.gboxInt = new System.Windows.Forms.GroupBox();
-            this.btnApFiltroI = new System.Windows.Forms.Button();
-            this.btnNingunoI = new System.Windows.Forms.Button();
-            this.chDif = new System.Windows.Forms.CheckBox();
-            this.chIgual = new System.Windows.Forms.CheckBox();
-            this.chMenor = new System.Windows.Forms.CheckBox();
-            this.chMayor = new System.Windows.Forms.CheckBox();
-            this.lblDif = new System.Windows.Forms.Label();
-            this.lblCampo4 = new System.Windows.Forms.Label();
-            this.lblCampo3 = new System.Windows.Forms.Label();
-            this.lblIgual = new System.Windows.Forms.Label();
-            this.txtDif = new System.Windows.Forms.TextBox();
-            this.txtIgual = new System.Windows.Forms.TextBox();
-            this.txtMenor = new System.Windows.Forms.TextBox();
-            this.lblMenor = new System.Windows.Forms.Label();
-            this.lblMayor = new System.Windows.Forms.Label();
-            this.txtMayor = new System.Windows.Forms.TextBox();
-            this.lblCampo2 = new System.Windows.Forms.Label();
-            this.lblCampo1 = new System.Windows.Forms.Label();
-            this.chlstCol = new System.Windows.Forms.CheckedListBox();
             this.gboxString = new System.Windows.Forms.GroupBox();
             this.btnApFiltroS = new System.Windows.Forms.Button();
             this.btnNingunoS = new System.Windows.Forms.Button();
@@ -72,12 +53,28 @@
             this.txtCamp1 = new System.Windows.Forms.TextBox();
             this.lblCamp2 = new System.Windows.Forms.Label();
             this.lblCamp1 = new System.Windows.Forms.Label();
+            this.btnApFiltroI = new System.Windows.Forms.Button();
+            this.btnNingunoI = new System.Windows.Forms.Button();
+            this.chDif = new System.Windows.Forms.CheckBox();
+            this.chIgual = new System.Windows.Forms.CheckBox();
+            this.chMenor = new System.Windows.Forms.CheckBox();
+            this.chMayor = new System.Windows.Forms.CheckBox();
+            this.lblDif = new System.Windows.Forms.Label();
+            this.lblCampo4 = new System.Windows.Forms.Label();
+            this.lblCampo3 = new System.Windows.Forms.Label();
+            this.lblIgual = new System.Windows.Forms.Label();
+            this.txtDif = new System.Windows.Forms.TextBox();
+            this.txtIgual = new System.Windows.Forms.TextBox();
+            this.txtMenor = new System.Windows.Forms.TextBox();
+            this.lblMenor = new System.Windows.Forms.Label();
+            this.lblMayor = new System.Windows.Forms.Label();
+            this.txtMayor = new System.Windows.Forms.TextBox();
+            this.lblCampo2 = new System.Windows.Forms.Label();
+            this.lblCampo1 = new System.Windows.Forms.Label();
+            this.chlstCol = new System.Windows.Forms.CheckedListBox();
             this.lblQuery = new System.Windows.Forms.Label();
             this.dgvRes = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblBd = new System.Windows.Forms.Label();
-            this.txtBd = new System.Windows.Forms.TextBox();
-            this.btnBd = new System.Windows.Forms.Button();
             this.btnCol = new System.Windows.Forms.Button();
             this.gboxInt.SuspendLayout();
             this.gboxString.SuspendLayout();
@@ -87,7 +84,7 @@
             // lstTablas
             // 
             this.lstTablas.FormattingEnabled = true;
-            this.lstTablas.Location = new System.Drawing.Point(12, 66);
+            this.lstTablas.Location = new System.Drawing.Point(12, 23);
             this.lstTablas.Name = "lstTablas";
             this.lstTablas.Size = new System.Drawing.Size(86, 108);
             this.lstTablas.TabIndex = 0;
@@ -96,7 +93,7 @@
             // lblTablas
             // 
             this.lblTablas.AutoSize = true;
-            this.lblTablas.Location = new System.Drawing.Point(12, 50);
+            this.lblTablas.Location = new System.Drawing.Point(12, 7);
             this.lblTablas.Name = "lblTablas";
             this.lblTablas.Size = new System.Drawing.Size(39, 13);
             this.lblTablas.TabIndex = 2;
@@ -105,7 +102,7 @@
             // lblCol
             // 
             this.lblCol.AutoSize = true;
-            this.lblCol.Location = new System.Drawing.Point(101, 50);
+            this.lblCol.Location = new System.Drawing.Point(101, 7);
             this.lblCol.Name = "lblCol";
             this.lblCol.Size = new System.Drawing.Size(53, 13);
             this.lblCol.TabIndex = 3;
@@ -114,7 +111,7 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(227, 50);
+            this.lblFiltro.Location = new System.Drawing.Point(227, 7);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(34, 13);
             this.lblFiltro.TabIndex = 4;
@@ -141,174 +138,12 @@
             this.gboxInt.Controls.Add(this.txtMayor);
             this.gboxInt.Controls.Add(this.lblCampo2);
             this.gboxInt.Controls.Add(this.lblCampo1);
-            this.gboxInt.Location = new System.Drawing.Point(230, 52);
+            this.gboxInt.Location = new System.Drawing.Point(230, 9);
             this.gboxInt.Name = "gboxInt";
             this.gboxInt.Size = new System.Drawing.Size(215, 164);
             this.gboxInt.TabIndex = 5;
             this.gboxInt.TabStop = false;
             this.gboxInt.Text = "Número";
-            // 
-            // btnApFiltroI
-            // 
-            this.btnApFiltroI.Location = new System.Drawing.Point(160, 10);
-            this.btnApFiltroI.Name = "btnApFiltroI";
-            this.btnApFiltroI.Size = new System.Drawing.Size(49, 23);
-            this.btnApFiltroI.TabIndex = 26;
-            this.btnApFiltroI.Text = "Aplicar";
-            this.btnApFiltroI.UseVisualStyleBackColor = true;
-            // 
-            // btnNingunoI
-            // 
-            this.btnNingunoI.Location = new System.Drawing.Point(146, 138);
-            this.btnNingunoI.Name = "btnNingunoI";
-            this.btnNingunoI.Size = new System.Drawing.Size(63, 23);
-            this.btnNingunoI.TabIndex = 26;
-            this.btnNingunoI.Text = "Ninguno";
-            this.btnNingunoI.UseVisualStyleBackColor = true;
-            // 
-            // chDif
-            // 
-            this.chDif.AutoSize = true;
-            this.chDif.Location = new System.Drawing.Point(180, 118);
-            this.chDif.Name = "chDif";
-            this.chDif.Size = new System.Drawing.Size(15, 14);
-            this.chDif.TabIndex = 17;
-            this.chDif.UseVisualStyleBackColor = true;
-            // 
-            // chIgual
-            // 
-            this.chIgual.AutoSize = true;
-            this.chIgual.Location = new System.Drawing.Point(180, 92);
-            this.chIgual.Name = "chIgual";
-            this.chIgual.Size = new System.Drawing.Size(15, 14);
-            this.chIgual.TabIndex = 16;
-            this.chIgual.UseVisualStyleBackColor = true;
-            // 
-            // chMenor
-            // 
-            this.chMenor.AutoSize = true;
-            this.chMenor.Location = new System.Drawing.Point(180, 65);
-            this.chMenor.Name = "chMenor";
-            this.chMenor.Size = new System.Drawing.Size(15, 14);
-            this.chMenor.TabIndex = 15;
-            this.chMenor.UseVisualStyleBackColor = true;
-            // 
-            // chMayor
-            // 
-            this.chMayor.AutoSize = true;
-            this.chMayor.Location = new System.Drawing.Point(180, 39);
-            this.chMayor.Name = "chMayor";
-            this.chMayor.Size = new System.Drawing.Size(15, 14);
-            this.chMayor.TabIndex = 14;
-            this.chMayor.UseVisualStyleBackColor = true;
-            // 
-            // lblDif
-            // 
-            this.lblDif.AutoSize = true;
-            this.lblDif.Location = new System.Drawing.Point(124, 117);
-            this.lblDif.Name = "lblDif";
-            this.lblDif.Size = new System.Drawing.Size(16, 13);
-            this.lblDif.TabIndex = 13;
-            this.lblDif.Text = "!=";
-            // 
-            // lblCampo4
-            // 
-            this.lblCampo4.AutoSize = true;
-            this.lblCampo4.Location = new System.Drawing.Point(6, 114);
-            this.lblCampo4.Name = "lblCampo4";
-            this.lblCampo4.Size = new System.Drawing.Size(46, 13);
-            this.lblCampo4.TabIndex = 12;
-            this.lblCampo4.Text = "[Campo]";
-            // 
-            // lblCampo3
-            // 
-            this.lblCampo3.AutoSize = true;
-            this.lblCampo3.Location = new System.Drawing.Point(6, 88);
-            this.lblCampo3.Name = "lblCampo3";
-            this.lblCampo3.Size = new System.Drawing.Size(46, 13);
-            this.lblCampo3.TabIndex = 11;
-            this.lblCampo3.Text = "[Campo]";
-            // 
-            // lblIgual
-            // 
-            this.lblIgual.AutoSize = true;
-            this.lblIgual.Location = new System.Drawing.Point(127, 91);
-            this.lblIgual.Name = "lblIgual";
-            this.lblIgual.Size = new System.Drawing.Size(13, 13);
-            this.lblIgual.TabIndex = 10;
-            this.lblIgual.Text = "=";
-            // 
-            // txtDif
-            // 
-            this.txtDif.Location = new System.Drawing.Point(146, 114);
-            this.txtDif.Name = "txtDif";
-            this.txtDif.Size = new System.Drawing.Size(28, 20);
-            this.txtDif.TabIndex = 9;
-            // 
-            // txtIgual
-            // 
-            this.txtIgual.Location = new System.Drawing.Point(146, 88);
-            this.txtIgual.Name = "txtIgual";
-            this.txtIgual.Size = new System.Drawing.Size(28, 20);
-            this.txtIgual.TabIndex = 8;
-            // 
-            // txtMenor
-            // 
-            this.txtMenor.Location = new System.Drawing.Point(146, 62);
-            this.txtMenor.Name = "txtMenor";
-            this.txtMenor.Size = new System.Drawing.Size(28, 20);
-            this.txtMenor.TabIndex = 7;
-            // 
-            // lblMenor
-            // 
-            this.lblMenor.AutoSize = true;
-            this.lblMenor.Location = new System.Drawing.Point(127, 65);
-            this.lblMenor.Name = "lblMenor";
-            this.lblMenor.Size = new System.Drawing.Size(13, 13);
-            this.lblMenor.TabIndex = 6;
-            this.lblMenor.Text = "<";
-            // 
-            // lblMayor
-            // 
-            this.lblMayor.AutoSize = true;
-            this.lblMayor.Location = new System.Drawing.Point(127, 39);
-            this.lblMayor.Name = "lblMayor";
-            this.lblMayor.Size = new System.Drawing.Size(13, 13);
-            this.lblMayor.TabIndex = 5;
-            this.lblMayor.Text = ">";
-            // 
-            // txtMayor
-            // 
-            this.txtMayor.Location = new System.Drawing.Point(146, 36);
-            this.txtMayor.Name = "txtMayor";
-            this.txtMayor.Size = new System.Drawing.Size(28, 20);
-            this.txtMayor.TabIndex = 4;
-            // 
-            // lblCampo2
-            // 
-            this.lblCampo2.AutoSize = true;
-            this.lblCampo2.Location = new System.Drawing.Point(6, 62);
-            this.lblCampo2.Name = "lblCampo2";
-            this.lblCampo2.Size = new System.Drawing.Size(46, 13);
-            this.lblCampo2.TabIndex = 2;
-            this.lblCampo2.Text = "[Campo]";
-            // 
-            // lblCampo1
-            // 
-            this.lblCampo1.AutoSize = true;
-            this.lblCampo1.Location = new System.Drawing.Point(6, 36);
-            this.lblCampo1.Name = "lblCampo1";
-            this.lblCampo1.Size = new System.Drawing.Size(46, 13);
-            this.lblCampo1.TabIndex = 0;
-            this.lblCampo1.Text = "[Campo]";
-            // 
-            // chlstCol
-            // 
-            this.chlstCol.FormattingEnabled = true;
-            this.chlstCol.Location = new System.Drawing.Point(104, 66);
-            this.chlstCol.Name = "chlstCol";
-            this.chlstCol.Size = new System.Drawing.Size(120, 109);
-            this.chlstCol.TabIndex = 0;
             // 
             // gboxString
             // 
@@ -491,10 +326,172 @@
             this.lblCamp1.TabIndex = 0;
             this.lblCamp1.Text = "[Campo]";
             // 
+            // btnApFiltroI
+            // 
+            this.btnApFiltroI.Location = new System.Drawing.Point(160, 10);
+            this.btnApFiltroI.Name = "btnApFiltroI";
+            this.btnApFiltroI.Size = new System.Drawing.Size(49, 23);
+            this.btnApFiltroI.TabIndex = 26;
+            this.btnApFiltroI.Text = "Aplicar";
+            this.btnApFiltroI.UseVisualStyleBackColor = true;
+            // 
+            // btnNingunoI
+            // 
+            this.btnNingunoI.Location = new System.Drawing.Point(146, 138);
+            this.btnNingunoI.Name = "btnNingunoI";
+            this.btnNingunoI.Size = new System.Drawing.Size(63, 23);
+            this.btnNingunoI.TabIndex = 26;
+            this.btnNingunoI.Text = "Ninguno";
+            this.btnNingunoI.UseVisualStyleBackColor = true;
+            // 
+            // chDif
+            // 
+            this.chDif.AutoSize = true;
+            this.chDif.Location = new System.Drawing.Point(180, 118);
+            this.chDif.Name = "chDif";
+            this.chDif.Size = new System.Drawing.Size(15, 14);
+            this.chDif.TabIndex = 17;
+            this.chDif.UseVisualStyleBackColor = true;
+            // 
+            // chIgual
+            // 
+            this.chIgual.AutoSize = true;
+            this.chIgual.Location = new System.Drawing.Point(180, 92);
+            this.chIgual.Name = "chIgual";
+            this.chIgual.Size = new System.Drawing.Size(15, 14);
+            this.chIgual.TabIndex = 16;
+            this.chIgual.UseVisualStyleBackColor = true;
+            // 
+            // chMenor
+            // 
+            this.chMenor.AutoSize = true;
+            this.chMenor.Location = new System.Drawing.Point(180, 65);
+            this.chMenor.Name = "chMenor";
+            this.chMenor.Size = new System.Drawing.Size(15, 14);
+            this.chMenor.TabIndex = 15;
+            this.chMenor.UseVisualStyleBackColor = true;
+            // 
+            // chMayor
+            // 
+            this.chMayor.AutoSize = true;
+            this.chMayor.Location = new System.Drawing.Point(180, 39);
+            this.chMayor.Name = "chMayor";
+            this.chMayor.Size = new System.Drawing.Size(15, 14);
+            this.chMayor.TabIndex = 14;
+            this.chMayor.UseVisualStyleBackColor = true;
+            // 
+            // lblDif
+            // 
+            this.lblDif.AutoSize = true;
+            this.lblDif.Location = new System.Drawing.Point(124, 117);
+            this.lblDif.Name = "lblDif";
+            this.lblDif.Size = new System.Drawing.Size(16, 13);
+            this.lblDif.TabIndex = 13;
+            this.lblDif.Text = "!=";
+            // 
+            // lblCampo4
+            // 
+            this.lblCampo4.AutoSize = true;
+            this.lblCampo4.Location = new System.Drawing.Point(6, 114);
+            this.lblCampo4.Name = "lblCampo4";
+            this.lblCampo4.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo4.TabIndex = 12;
+            this.lblCampo4.Text = "[Campo]";
+            // 
+            // lblCampo3
+            // 
+            this.lblCampo3.AutoSize = true;
+            this.lblCampo3.Location = new System.Drawing.Point(6, 88);
+            this.lblCampo3.Name = "lblCampo3";
+            this.lblCampo3.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo3.TabIndex = 11;
+            this.lblCampo3.Text = "[Campo]";
+            // 
+            // lblIgual
+            // 
+            this.lblIgual.AutoSize = true;
+            this.lblIgual.Location = new System.Drawing.Point(127, 91);
+            this.lblIgual.Name = "lblIgual";
+            this.lblIgual.Size = new System.Drawing.Size(13, 13);
+            this.lblIgual.TabIndex = 10;
+            this.lblIgual.Text = "=";
+            // 
+            // txtDif
+            // 
+            this.txtDif.Location = new System.Drawing.Point(146, 114);
+            this.txtDif.Name = "txtDif";
+            this.txtDif.Size = new System.Drawing.Size(28, 20);
+            this.txtDif.TabIndex = 9;
+            // 
+            // txtIgual
+            // 
+            this.txtIgual.Location = new System.Drawing.Point(146, 88);
+            this.txtIgual.Name = "txtIgual";
+            this.txtIgual.Size = new System.Drawing.Size(28, 20);
+            this.txtIgual.TabIndex = 8;
+            // 
+            // txtMenor
+            // 
+            this.txtMenor.Location = new System.Drawing.Point(146, 62);
+            this.txtMenor.Name = "txtMenor";
+            this.txtMenor.Size = new System.Drawing.Size(28, 20);
+            this.txtMenor.TabIndex = 7;
+            // 
+            // lblMenor
+            // 
+            this.lblMenor.AutoSize = true;
+            this.lblMenor.Location = new System.Drawing.Point(127, 65);
+            this.lblMenor.Name = "lblMenor";
+            this.lblMenor.Size = new System.Drawing.Size(13, 13);
+            this.lblMenor.TabIndex = 6;
+            this.lblMenor.Text = "<";
+            // 
+            // lblMayor
+            // 
+            this.lblMayor.AutoSize = true;
+            this.lblMayor.Location = new System.Drawing.Point(127, 39);
+            this.lblMayor.Name = "lblMayor";
+            this.lblMayor.Size = new System.Drawing.Size(13, 13);
+            this.lblMayor.TabIndex = 5;
+            this.lblMayor.Text = ">";
+            // 
+            // txtMayor
+            // 
+            this.txtMayor.Location = new System.Drawing.Point(146, 36);
+            this.txtMayor.Name = "txtMayor";
+            this.txtMayor.Size = new System.Drawing.Size(28, 20);
+            this.txtMayor.TabIndex = 4;
+            // 
+            // lblCampo2
+            // 
+            this.lblCampo2.AutoSize = true;
+            this.lblCampo2.Location = new System.Drawing.Point(6, 62);
+            this.lblCampo2.Name = "lblCampo2";
+            this.lblCampo2.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo2.TabIndex = 2;
+            this.lblCampo2.Text = "[Campo]";
+            // 
+            // lblCampo1
+            // 
+            this.lblCampo1.AutoSize = true;
+            this.lblCampo1.Location = new System.Drawing.Point(6, 36);
+            this.lblCampo1.Name = "lblCampo1";
+            this.lblCampo1.Size = new System.Drawing.Size(46, 13);
+            this.lblCampo1.TabIndex = 0;
+            this.lblCampo1.Text = "[Campo]";
+            // 
+            // chlstCol
+            // 
+            this.chlstCol.FormattingEnabled = true;
+            this.chlstCol.Location = new System.Drawing.Point(104, 23);
+            this.chlstCol.Name = "chlstCol";
+            this.chlstCol.Size = new System.Drawing.Size(120, 109);
+            this.chlstCol.TabIndex = 0;
+            // 
             // lblQuery
             // 
             this.lblQuery.AutoSize = true;
-            this.lblQuery.Location = new System.Drawing.Point(12, 227);
+            this.lblQuery.Location = new System.Drawing.Point(12, 184);
             this.lblQuery.Name = "lblQuery";
             this.lblQuery.Size = new System.Drawing.Size(35, 13);
             this.lblQuery.TabIndex = 19;
@@ -505,7 +502,7 @@
             this.dgvRes.AllowUserToAddRows = false;
             this.dgvRes.AllowUserToDeleteRows = false;
             this.dgvRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRes.Location = new System.Drawing.Point(12, 255);
+            this.dgvRes.Location = new System.Drawing.Point(12, 212);
             this.dgvRes.Name = "dgvRes";
             this.dgvRes.ReadOnly = true;
             this.dgvRes.Size = new System.Drawing.Size(433, 102);
@@ -513,42 +510,16 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(393, 222);
+            this.btnBuscar.Location = new System.Drawing.Point(393, 179);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 23);
             this.btnBuscar.TabIndex = 21;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // lblBd
-            // 
-            this.lblBd.AutoSize = true;
-            this.lblBd.Location = new System.Drawing.Point(12, 9);
-            this.lblBd.Name = "lblBd";
-            this.lblBd.Size = new System.Drawing.Size(129, 13);
-            this.lblBd.TabIndex = 22;
-            this.lblBd.Text = "Nombre de base de datos";
-            // 
-            // txtBd
-            // 
-            this.txtBd.Location = new System.Drawing.Point(147, 6);
-            this.txtBd.Name = "txtBd";
-            this.txtBd.Size = new System.Drawing.Size(77, 20);
-            this.txtBd.TabIndex = 18;
-            // 
-            // btnBd
-            // 
-            this.btnBd.Location = new System.Drawing.Point(236, 4);
-            this.btnBd.Name = "btnBd";
-            this.btnBd.Size = new System.Drawing.Size(96, 23);
-            this.btnBd.TabIndex = 23;
-            this.btnBd.Text = "Inspeccionar";
-            this.btnBd.UseVisualStyleBackColor = true;
-            this.btnBd.Click += new System.EventHandler(this.btnBd_Click);
-            // 
             // btnCol
             // 
-            this.btnCol.Location = new System.Drawing.Point(104, 181);
+            this.btnCol.Location = new System.Drawing.Point(104, 138);
             this.btnCol.Name = "btnCol";
             this.btnCol.Size = new System.Drawing.Size(120, 27);
             this.btnCol.TabIndex = 24;
@@ -561,11 +532,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(457, 369);
+            this.ClientSize = new System.Drawing.Size(457, 330);
             this.Controls.Add(this.btnCol);
-            this.Controls.Add(this.btnBd);
-            this.Controls.Add(this.txtBd);
-            this.Controls.Add(this.lblBd);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvRes);
             this.Controls.Add(this.lblQuery);
@@ -633,9 +601,6 @@
         private System.Windows.Forms.Label lblQuery;
         private System.Windows.Forms.DataGridView dgvRes;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label lblBd;
-        private System.Windows.Forms.TextBox txtBd;
-        private System.Windows.Forms.Button btnBd;
         private System.Windows.Forms.Button btnApFiltroS;
         private System.Windows.Forms.Button btnNingunoI;
         private System.Windows.Forms.Button btnNingunoS;
