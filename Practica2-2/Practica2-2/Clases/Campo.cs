@@ -26,13 +26,7 @@ namespace Practica2_2.Clases
             get { return nombre; }
             set { nombre = value; }
         }
-        private string tipo;
 
-        public string Tipo
-        {
-            get { return tipo; }
-            set { tipo = value; }
-        }
         private List<string> filtros = new List<string>();
 
         public List<string> Filtros
@@ -47,10 +41,9 @@ namespace Practica2_2.Clases
         {
 
         }
-        public Campo(string nom, string tip)
+        public Campo(string nom)
         {
             nombre = nom;
-            tipo = tip;
         }
         #endregion
 
@@ -65,7 +58,7 @@ namespace Practica2_2.Clases
         {
             campos.Clear();
             Estructura objEst = new Estructura();
-            objEst.Sentencia = string.Format("use {0} SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{1}'", bd, tab);
+            objEst.Sentencia = string.Format("use {0} SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{1}'", bd, tab);
             objEst.Parametros = new SqlParameter[] { };
             objEst.Valores = new List<object>() { };
             objEst.Tabla = "Columnas";
@@ -77,7 +70,7 @@ namespace Practica2_2.Clases
             columnas = objOp.ObtenerDtt();
             for (int i = 0; i < columnas.Rows.Count; i++)
             {
-                Campo ca = new Campo(columnas.Rows[i]["COLUMN_NAME"].ToString(), columnas.Rows[i]["DATA_TYPE"].ToString());
+                Campo ca = new Campo(columnas.Rows[i]["COLUMN_NAME"].ToString());
                 campos.Add(ca);
             }
         }

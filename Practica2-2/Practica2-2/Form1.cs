@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,13 +29,14 @@ namespace Practica2_2
 
         private void lstTablas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            chlstCol.Items.Clear();
             tabla = lstTablas.SelectedItem.ToString();
             Campo.LlamarCampos(tabla, baseDatos);
-            foreach (Campo camp in Campo.Campos)
-            {
-                chlstCol.Items.Add(camp.Nombre);
-            }
+
+            lblCampo1.Text = Campo.Campos[1].Nombre;
+            lblCampo2.Text = Campo.Campos[2].Nombre;
+            lblCampo3.Text = Campo.Campos[3].Nombre;
+            lblCampo4.Text = Campo.Campos[4].Nombre;
+
             GenerarQuery(tabla, "tab");
         }
 
@@ -78,7 +80,6 @@ namespace Practica2_2
             try
             {
                 lstTablas.Items.Clear();
-                chlstCol.Items.Clear();
                 Tabla.LlamarTablas(baseDatos);
                 for (int i = 0; i < Tabla.Tablas.Count; i++)
                 {
