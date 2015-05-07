@@ -26,6 +26,7 @@ namespace Practica2_2
         static string filtros;
         static string filtrosParam;
         static List<string> param = new List<string>();
+        static List<object> valores = new List<object>();
         public Form1()
         {
             InitializeComponent();
@@ -177,19 +178,35 @@ namespace Practica2_2
         private void check1_CheckedChanged(object sender, EventArgs e)
         {
             if (check1.Checked)
+            {
                 filtroCount++;
+                valores.Add(txt1.Text);
+            }
             else
+            {
                 filtroCount--;
+                valores.Remove(txt1.Text);
+                param.Remove("id");
+            }
+                
 
             GenerarQuery(tabla);
         }
 
         private void check2_CheckedChanged(object sender, EventArgs e)
         {
-            if (check2.Checked)
+            if (check2.Checked){
                 filtroCount++;
+                valores.Add(txt2.Text);
+            }
+
             else
+            {
                 filtroCount--;
+                valores.Remove(txt2.Text);
+                param.Remove("nombre");
+            }
+                
 
             GenerarQuery(tabla);
         }
@@ -197,9 +214,16 @@ namespace Practica2_2
         private void check3_CheckedChanged(object sender, EventArgs e)
         {
             if (check3.Checked)
+            {
                 filtroCount++;
+                valores.Add(txt3.Text);
+            }
             else
+            {
                 filtroCount--;
+                valores.Remove(txt3.Text);
+                param.Remove("marca");
+            }
 
             GenerarQuery(tabla);
         }
@@ -207,17 +231,32 @@ namespace Practica2_2
         private void check4_CheckedChanged(object sender, EventArgs e)
         {
             if (check4.Checked)
+            {
                 filtroCount++;
+                valores.Add(txt4.Text);
+            }
             else
+            {
                 filtroCount--;
+                valores.Remove(txt4.Text);
+                param.Remove("color");
+            }
 
             GenerarQuery(tabla);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
-            
+            if (!(lblCampo1.Text == "[Campo]"))
+            {
+                Operaciones objOp = new Operaciones();
+                objOp.Elemento = FormarEstructura();
+                DataTable Dtt = new DataTable();
+                Dtt = objOp.ObtenerDtt();
+                dgvRes.DataSource = Dtt;
+            }
+            else
+                MessageBox.Show("Seleccionar Tabla");
         }
 
         private Estructura FormarEstructura()
@@ -237,8 +276,7 @@ namespace Practica2_2
                     objEst.Parametros[i] = new SqlParameter(param[i], SqlDbType.NVarChar, 50);
                 }
             }
-            
-
+            objEst.Valores = valores;
             return objEst;
         }
     }
