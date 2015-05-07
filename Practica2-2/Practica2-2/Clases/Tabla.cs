@@ -23,6 +23,7 @@ namespace Practica2_2.Clases
         #region METODOS
         public void LlamarTablas(string bd)
         {
+            Tablas.Clear();
             string bDatos = bd;
             Estructura objEst = new Estructura();
             objEst.Sentencia = string.Format("use {0} SELECT name FROM sys.tables", bDatos);

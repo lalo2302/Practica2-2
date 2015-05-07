@@ -49,10 +49,7 @@ namespace Practica2_2.Clases
 
         #region METODOS
 
-        public void AplicarFiltros()
-        {
-           
-        }
+
 
         public void LlamarCampos(string tab, string bd)
         {

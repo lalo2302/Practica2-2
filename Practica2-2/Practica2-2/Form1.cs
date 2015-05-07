@@ -27,10 +27,12 @@ namespace Practica2_2
         static string filtrosParam;
         static List<string> param = new List<string>();
         static List<object> valores = new List<object>();
+        
         public Form1()
         {
             InitializeComponent();
             LlamarTablas();
+
         }
         
 
@@ -56,6 +58,8 @@ namespace Practica2_2
             {
                 columnas = String.Empty;
                 filtros = String.Empty;
+                filtrosParam = String.Empty;
+
                 int count = 0;
                 
                     if (check1.Checked)
@@ -65,20 +69,23 @@ namespace Practica2_2
                         {
                             filtros = "WHERE " + lblCampo1.Text + " > " + txt1.Text;
                             filtrosParam = "WHERE " + lblCampo1.Text + " > @id ";
-                            param.Add("id");
+                            if (!param.Contains("id"))
+                                param.Add("id");
 
                         }
                         count++;
                     }
                     if (check2.Checked)
                     {
+
                         if (count == 0)
                         {
                             if (txt2.Text != String.Empty)
                             {
                                 filtros = "WHERE " + lblCampo2.Text + " LIKE '%" + txt2.Text + "%'";
                                 filtrosParam = "WHERE " + lblCampo2.Text + " LIKE '%@nombre%'";
-                                param.Add("nombre");
+                                if (!param.Contains("nombre"))
+                                    param.Add("nombre");
                             }
 
                             columnas = lblCampo2.Text;
@@ -88,7 +95,8 @@ namespace Practica2_2
                             if (txt2.Text != String.Empty) {
                                 filtros += " AND " + lblCampo2.Text + " LIKE '%" + txt2.Text + "%'";
                                 filtrosParam += " AND " + lblCampo2.Text + " LIKE '%@nombre%'";
-                                param.Add("nombre");
+                                if (!param.Contains("nombre"))
+                                    param.Add("nombre");
                                 }
 
                             columnas += ", " + lblCampo2.Text;
@@ -103,7 +111,8 @@ namespace Practica2_2
                             {
                                 filtros = "WHERE " + lblCampo3.Text + " = " + txt3.Text;
                                 filtrosParam = "WHERE " + lblCampo3.Text + " = @marca";
-                                param.Add("marca");
+                                if (!param.Contains("marca"))
+                                    param.Add("marca");
                             }
 
                             columnas = lblCampo3.Text;
@@ -114,7 +123,8 @@ namespace Practica2_2
                             {
                                 filtros += " AND " + lblCampo3.Text + " = " + txt3.Text;
                                 filtrosParam += " AND " + lblCampo3.Text + " = @marca";
-                                param.Add("marca");
+                                if (!param.Contains("marca"))
+                                    param.Add("marca");
                             }
 
                             columnas += ", " + lblCampo3.Text;
@@ -129,7 +139,8 @@ namespace Practica2_2
                             {
                                 filtros = "WHERE " + lblCampo4.Text + " LIKE '%" + txt4.Text + "'";
                                 filtrosParam = "WHERE " + lblCampo4.Text + " LIKE '%@color'";
-                                param.Add("color");
+                                if (!param.Contains("color"))
+                                    param.Add("color");
                             }
 
                             columnas = lblCampo4.Text;
@@ -140,7 +151,8 @@ namespace Practica2_2
                             {
                                 filtros += " AND " + lblCampo4.Text + " LIKE '%" + txt4.Text + "'";
                                 filtrosParam += " AND " + lblCampo4.Text + " LIKE '%@color'";
-                                param.Add("color");
+                                if (!param.Contains("color"))
+                                    param.Add("color");
                             }
 
                             columnas += ", " + lblCampo4.Text;
@@ -169,7 +181,7 @@ namespace Practica2_2
                     lstTablas.Items.Add(Tabla.Tablas[i]);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Esa base de datos no existe");
             }
@@ -177,10 +189,19 @@ namespace Practica2_2
 
         private void check1_CheckedChanged(object sender, EventArgs e)
         {
+            
             if (check1.Checked)
             {
-                filtroCount++;
-                valores.Add(txt1.Text);
+                if (txt1.Text != String.Empty)
+                {
+                    filtroCount++;
+                    valores.Add(txt1.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Introduce un valor.");
+                    check1.Checked = false;
+                }
             }
             else
             {
@@ -196,8 +217,16 @@ namespace Practica2_2
         private void check2_CheckedChanged(object sender, EventArgs e)
         {
             if (check2.Checked){
-                filtroCount++;
-                valores.Add(txt2.Text);
+                if (txt2.Text != String.Empty)
+                {
+                    filtroCount++;
+                    valores.Add(txt2.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Introduce un valor.");
+                    check2.Checked = false;
+                }
             }
 
             else
@@ -215,8 +244,16 @@ namespace Practica2_2
         {
             if (check3.Checked)
             {
-                filtroCount++;
-                valores.Add(txt3.Text);
+                if (txt3.Text != String.Empty)
+                {
+                    filtroCount++;
+                    valores.Add(txt3.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Introduce un valor.");
+                    check3.Checked = false;
+                }
             }
             else
             {
@@ -232,8 +269,16 @@ namespace Practica2_2
         {
             if (check4.Checked)
             {
-                filtroCount++;
-                valores.Add(txt4.Text);
+                if (txt4.Text != String.Empty)
+                {
+                    filtroCount++;
+                    valores.Add(txt4.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Introduce un valor.");
+                    check4.Checked = false;
+                }
             }
             else
             {
@@ -254,6 +299,10 @@ namespace Practica2_2
                 DataTable Dtt = new DataTable();
                 Dtt = objOp.ObtenerDtt();
                 dgvRes.DataSource = Dtt;
+                btnBuscar.Enabled = false;
+                btnReset.Enabled = true;
+                filtroCount = 0;
+                valores.Clear();
             }
             else
                 MessageBox.Show("Seleccionar Tabla");
@@ -278,6 +327,13 @@ namespace Practica2_2
             }
             objEst.Valores = valores;
             return objEst;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
+            this.LlamarTablas();
         }
     }
 }

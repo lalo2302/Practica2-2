@@ -51,6 +51,7 @@
             this.check2 = new System.Windows.Forms.CheckBox();
             this.check3 = new System.Windows.Forms.CheckBox();
             this.check4 = new System.Windows.Forms.CheckBox();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +99,7 @@
             this.dgvRes.Location = new System.Drawing.Point(12, 188);
             this.dgvRes.Name = "dgvRes";
             this.dgvRes.ReadOnly = true;
-            this.dgvRes.Size = new System.Drawing.Size(646, 102);
+            this.dgvRes.Size = new System.Drawing.Size(646, 156);
             this.dgvRes.TabIndex = 20;
             // 
             // btnBuscar
@@ -209,7 +210,7 @@
             this.lblEmpieza.Name = "lblEmpieza";
             this.lblEmpieza.Size = new System.Drawing.Size(22, 13);
             this.lblEmpieza.TabIndex = 13;
-            this.lblEmpieza.Text = "X%";
+            this.lblEmpieza.Text = "%X";
             // 
             // check1
             // 
@@ -251,12 +252,24 @@
             this.check4.UseVisualStyleBackColor = true;
             this.check4.CheckedChanged += new System.EventHandler(this.check4_CheckedChanged);
             // 
+            // btnReset
+            // 
+            this.btnReset.Enabled = false;
+            this.btnReset.Location = new System.Drawing.Point(476, 140);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(101, 23);
+            this.btnReset.TabIndex = 22;
+            this.btnReset.Text = "Nueva Búsqueda";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(671, 302);
+            this.ClientSize = new System.Drawing.Size(671, 356);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.check4);
             this.Controls.Add(this.dgvRes);
@@ -313,6 +326,7 @@
         private System.Windows.Forms.CheckBox check2;
         private System.Windows.Forms.CheckBox check3;
         private System.Windows.Forms.CheckBox check4;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
