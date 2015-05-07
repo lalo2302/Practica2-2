@@ -20,6 +20,7 @@ namespace Practica2_2
         static string baseDatos;
         static string tabla;
         static string query = "";
+        static int filtroCount = 0;
         public Form1()
         {
             InitializeComponent();
@@ -37,41 +38,87 @@ namespace Practica2_2
             lblCampo3.Text = Campo.Campos[2].Nombre;
             lblCampo4.Text = Campo.Campos[3].Nombre;
 
-            GenerarQuery(tabla, "tab");
+            GenerarQuery(tabla);
         }
 
-        private void GenerarQuery(string txt, string paso)
+        private void GenerarQuery(string txt)
         {
-            if (paso == "bd")
+            if (lblCampo1.Text != "[Campo]")
             {
-                query = string.Empty;
-                query += "SELECT " + txt;
-                lblQuery.Text = query;
-            }
-            else if (paso == "tab")
-            {
-                GenerarQuery("*", "bd");
-                query += " FROM " + txt;
-                lblQuery.Text = query;
-            }
-            else if (paso == "camp")
-            {
-                string columnas = string.Empty;
+                string columnas = String.Empty;
+                string filtros = String.Empty;
+                int count = 0;
+                
+                    if (check1.Checked)
+                    {
+                        columnas = lblCampo1.Text;
+                        if (txt1.Text != String.Empty)
+                        {
+                            filtros = "WHERE " + lblCampo1.Text + " > " + txt1.Text;
+                        }
+                        count++;
+                    }
+                    if (check2.Checked)
+                    {
+                        if (count == 0)
+                        {
+                            if (txt2.Text != String.Empty)
+                                filtros = "WHERE " + lblCampo2.Text + " LIKE %" + txt2.Text + "%";
 
-                for (int i = 0; i < Campo.Campos.Count; i++)
-                {
-                    if (i == 0)
-                    {
-                        columnas = Campo.Campos[i].Nombre;
+                            columnas = lblCampo2.Text;
+                        }
+                        else
+                        {
+                            if (txt2.Text != String.Empty)
+                                filtros += " AND " + lblCampo2.Text + " LIKE %" + txt2.Text + "%";
+
+                            columnas += ", " + lblCampo2.Text;
+                        }
+                        count++;
                     }
-                    else
+                    if (check3.Checked)
                     {
-                        columnas += "," + Campo.Campos[i].Nombre;
+                        if (count == 0)
+                        {
+                            if (txt3.Text != String.Empty)
+                                filtros = "WHERE " + lblCampo3.Text + " = " + txt3.Text;
+
+                            columnas = lblCampo3.Text;
+                        }
+                        else
+                        {
+                            if (txt3.Text != String.Empty)
+                                filtros += " AND " + lblCampo3.Text + " = " + txt3.Text;
+
+                            columnas += ", " + lblCampo3.Text;
+                        }
+                        count++;
                     }
-                }
-                query = string.Format("SELECT {0} FROM {1}", columnas, tabla);
+                    if (check4.Checked)
+                    {
+                        if (count == 0)
+                        {
+                            if (txt4.Text != String.Empty)
+                                filtros = "WHERE " + lblCampo4.Text + " LIKE %" + txt4.Text;
+
+                            columnas = lblCampo4.Text;
+                        }
+                        else
+                        {
+                            if (txt4.Text != String.Empty)
+                                filtros += " AND " + lblCampo4.Text + " LIKE %" + txt4.Text;
+
+                            columnas += ", " + lblCampo4.Text;
+                        }
+                        count++;
+                    }
+                    if (!(filtroCount != 0 && filtroCount != 4))
+                        columnas = "*";
+
+                query = string.Format("SELECT {0} FROM {1} {2}", columnas, tabla, filtros);
                 lblQuery.Text = query;
             }
+
             
         }
         private void LlamarTablas()
@@ -85,12 +132,56 @@ namespace Practica2_2
                 {
                     lstTablas.Items.Add(Tabla.Tablas[i]);
                 }
-                GenerarQuery("*", "bd");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Esa base de datos no existe");
             }
+        }
+
+        private void check1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check1.Checked)
+                filtroCount++;
+            else
+                filtroCount--;
+
+            GenerarQuery(tabla);
+        }
+
+        private void check2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check2.Checked)
+                filtroCount++;
+            else
+                filtroCount--;
+
+            GenerarQuery(tabla);
+        }
+
+        private void check3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check3.Checked)
+                filtroCount++;
+            else
+                filtroCount--;
+
+            GenerarQuery(tabla);
+        }
+
+        private void check4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check4.Checked)
+                filtroCount++;
+            else
+                filtroCount--;
+
+            GenerarQuery(tabla);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,20 +37,20 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblCampo1 = new System.Windows.Forms.Label();
             this.lblCampo2 = new System.Windows.Forms.Label();
-            this.txtMayor = new System.Windows.Forms.TextBox();
+            this.txt1 = new System.Windows.Forms.TextBox();
             this.lblMayor = new System.Windows.Forms.Label();
             this.lblContiene = new System.Windows.Forms.Label();
-            this.txtMenor = new System.Windows.Forms.TextBox();
-            this.txtIgual = new System.Windows.Forms.TextBox();
-            this.txtDif = new System.Windows.Forms.TextBox();
+            this.txt2 = new System.Windows.Forms.TextBox();
+            this.txt3 = new System.Windows.Forms.TextBox();
+            this.txt4 = new System.Windows.Forms.TextBox();
             this.lblIgual = new System.Windows.Forms.Label();
             this.lblCampo3 = new System.Windows.Forms.Label();
             this.lblCampo4 = new System.Windows.Forms.Label();
             this.lblEmpieza = new System.Windows.Forms.Label();
-            this.chMayor = new System.Windows.Forms.CheckBox();
-            this.chMenor = new System.Windows.Forms.CheckBox();
-            this.chIgual = new System.Windows.Forms.CheckBox();
-            this.chDif = new System.Windows.Forms.CheckBox();
+            this.check1 = new System.Windows.Forms.CheckBox();
+            this.check2 = new System.Windows.Forms.CheckBox();
+            this.check3 = new System.Windows.Forms.CheckBox();
+            this.check4 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.lstTablas.FormattingEnabled = true;
             this.lstTablas.Location = new System.Drawing.Point(12, 23);
             this.lstTablas.Name = "lstTablas";
-            this.lstTablas.Size = new System.Drawing.Size(86, 108);
+            this.lstTablas.Size = new System.Drawing.Size(165, 108);
             this.lstTablas.TabIndex = 0;
             this.lstTablas.SelectedIndexChanged += new System.EventHandler(this.lstTablas_SelectedIndexChanged);
             // 
@@ -75,7 +75,7 @@
             // lblCol
             // 
             this.lblCol.AutoSize = true;
-            this.lblCol.Location = new System.Drawing.Point(101, 7);
+            this.lblCol.Location = new System.Drawing.Point(470, 7);
             this.lblCol.Name = "lblCol";
             this.lblCol.Size = new System.Drawing.Size(53, 13);
             this.lblCol.TabIndex = 3;
@@ -98,22 +98,23 @@
             this.dgvRes.Location = new System.Drawing.Point(12, 188);
             this.dgvRes.Name = "dgvRes";
             this.dgvRes.ReadOnly = true;
-            this.dgvRes.Size = new System.Drawing.Size(277, 102);
+            this.dgvRes.Size = new System.Drawing.Size(646, 102);
             this.dgvRes.TabIndex = 20;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(219, 140);
+            this.btnBuscar.Location = new System.Drawing.Point(588, 140);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(49, 23);
             this.btnBuscar.TabIndex = 21;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblCampo1
             // 
             this.lblCampo1.AutoSize = true;
-            this.lblCampo1.Location = new System.Drawing.Point(104, 28);
+            this.lblCampo1.Location = new System.Drawing.Point(473, 28);
             this.lblCampo1.Name = "lblCampo1";
             this.lblCampo1.Size = new System.Drawing.Size(46, 13);
             this.lblCampo1.TabIndex = 0;
@@ -122,23 +123,23 @@
             // lblCampo2
             // 
             this.lblCampo2.AutoSize = true;
-            this.lblCampo2.Location = new System.Drawing.Point(104, 57);
+            this.lblCampo2.Location = new System.Drawing.Point(473, 57);
             this.lblCampo2.Name = "lblCampo2";
             this.lblCampo2.Size = new System.Drawing.Size(46, 13);
             this.lblCampo2.TabIndex = 2;
             this.lblCampo2.Text = "[Campo]";
             // 
-            // txtMayor
+            // txt1
             // 
-            this.txtMayor.Location = new System.Drawing.Point(219, 25);
-            this.txtMayor.Name = "txtMayor";
-            this.txtMayor.Size = new System.Drawing.Size(49, 20);
-            this.txtMayor.TabIndex = 4;
+            this.txt1.Location = new System.Drawing.Point(588, 25);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(49, 20);
+            this.txt1.TabIndex = 4;
             // 
             // lblMayor
             // 
             this.lblMayor.AutoSize = true;
-            this.lblMayor.Location = new System.Drawing.Point(189, 28);
+            this.lblMayor.Location = new System.Drawing.Point(558, 28);
             this.lblMayor.Name = "lblMayor";
             this.lblMayor.Size = new System.Drawing.Size(13, 13);
             this.lblMayor.TabIndex = 5;
@@ -147,37 +148,37 @@
             // lblContiene
             // 
             this.lblContiene.AutoSize = true;
-            this.lblContiene.Location = new System.Drawing.Point(181, 57);
+            this.lblContiene.Location = new System.Drawing.Point(550, 57);
             this.lblContiene.Name = "lblContiene";
             this.lblContiene.Size = new System.Drawing.Size(30, 13);
             this.lblContiene.TabIndex = 6;
             this.lblContiene.Text = "%X%";
             // 
-            // txtMenor
+            // txt2
             // 
-            this.txtMenor.Location = new System.Drawing.Point(219, 54);
-            this.txtMenor.Name = "txtMenor";
-            this.txtMenor.Size = new System.Drawing.Size(49, 20);
-            this.txtMenor.TabIndex = 7;
+            this.txt2.Location = new System.Drawing.Point(588, 54);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(49, 20);
+            this.txt2.TabIndex = 7;
             // 
-            // txtIgual
+            // txt3
             // 
-            this.txtIgual.Location = new System.Drawing.Point(219, 83);
-            this.txtIgual.Name = "txtIgual";
-            this.txtIgual.Size = new System.Drawing.Size(49, 20);
-            this.txtIgual.TabIndex = 8;
+            this.txt3.Location = new System.Drawing.Point(588, 83);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(49, 20);
+            this.txt3.TabIndex = 8;
             // 
-            // txtDif
+            // txt4
             // 
-            this.txtDif.Location = new System.Drawing.Point(219, 114);
-            this.txtDif.Name = "txtDif";
-            this.txtDif.Size = new System.Drawing.Size(49, 20);
-            this.txtDif.TabIndex = 9;
+            this.txt4.Location = new System.Drawing.Point(588, 114);
+            this.txt4.Name = "txt4";
+            this.txt4.Size = new System.Drawing.Size(49, 20);
+            this.txt4.TabIndex = 9;
             // 
             // lblIgual
             // 
             this.lblIgual.AutoSize = true;
-            this.lblIgual.Location = new System.Drawing.Point(189, 86);
+            this.lblIgual.Location = new System.Drawing.Point(558, 86);
             this.lblIgual.Name = "lblIgual";
             this.lblIgual.Size = new System.Drawing.Size(13, 13);
             this.lblIgual.TabIndex = 10;
@@ -186,7 +187,7 @@
             // lblCampo3
             // 
             this.lblCampo3.AutoSize = true;
-            this.lblCampo3.Location = new System.Drawing.Point(104, 86);
+            this.lblCampo3.Location = new System.Drawing.Point(473, 86);
             this.lblCampo3.Name = "lblCampo3";
             this.lblCampo3.Size = new System.Drawing.Size(46, 13);
             this.lblCampo3.TabIndex = 11;
@@ -195,7 +196,7 @@
             // lblCampo4
             // 
             this.lblCampo4.AutoSize = true;
-            this.lblCampo4.Location = new System.Drawing.Point(104, 114);
+            this.lblCampo4.Location = new System.Drawing.Point(473, 114);
             this.lblCampo4.Name = "lblCampo4";
             this.lblCampo4.Size = new System.Drawing.Size(46, 13);
             this.lblCampo4.TabIndex = 12;
@@ -204,61 +205,65 @@
             // lblEmpieza
             // 
             this.lblEmpieza.AutoSize = true;
-            this.lblEmpieza.Location = new System.Drawing.Point(186, 117);
+            this.lblEmpieza.Location = new System.Drawing.Point(555, 117);
             this.lblEmpieza.Name = "lblEmpieza";
             this.lblEmpieza.Size = new System.Drawing.Size(22, 13);
             this.lblEmpieza.TabIndex = 13;
             this.lblEmpieza.Text = "X%";
             // 
-            // chMayor
+            // check1
             // 
-            this.chMayor.AutoSize = true;
-            this.chMayor.Location = new System.Drawing.Point(274, 28);
-            this.chMayor.Name = "chMayor";
-            this.chMayor.Size = new System.Drawing.Size(15, 14);
-            this.chMayor.TabIndex = 14;
-            this.chMayor.UseVisualStyleBackColor = true;
+            this.check1.AutoSize = true;
+            this.check1.Location = new System.Drawing.Point(643, 28);
+            this.check1.Name = "check1";
+            this.check1.Size = new System.Drawing.Size(15, 14);
+            this.check1.TabIndex = 14;
+            this.check1.UseVisualStyleBackColor = true;
+            this.check1.CheckedChanged += new System.EventHandler(this.check1_CheckedChanged);
             // 
-            // chMenor
+            // check2
             // 
-            this.chMenor.AutoSize = true;
-            this.chMenor.Location = new System.Drawing.Point(274, 60);
-            this.chMenor.Name = "chMenor";
-            this.chMenor.Size = new System.Drawing.Size(15, 14);
-            this.chMenor.TabIndex = 15;
-            this.chMenor.UseVisualStyleBackColor = true;
+            this.check2.AutoSize = true;
+            this.check2.Location = new System.Drawing.Point(643, 58);
+            this.check2.Name = "check2";
+            this.check2.Size = new System.Drawing.Size(15, 14);
+            this.check2.TabIndex = 15;
+            this.check2.UseVisualStyleBackColor = true;
+            this.check2.CheckedChanged += new System.EventHandler(this.check2_CheckedChanged);
             // 
-            // chIgual
+            // check3
             // 
-            this.chIgual.AutoSize = true;
-            this.chIgual.Location = new System.Drawing.Point(274, 86);
-            this.chIgual.Name = "chIgual";
-            this.chIgual.Size = new System.Drawing.Size(15, 14);
-            this.chIgual.TabIndex = 16;
-            this.chIgual.UseVisualStyleBackColor = true;
+            this.check3.AutoSize = true;
+            this.check3.Location = new System.Drawing.Point(643, 87);
+            this.check3.Name = "check3";
+            this.check3.Size = new System.Drawing.Size(15, 14);
+            this.check3.TabIndex = 16;
+            this.check3.UseVisualStyleBackColor = true;
+            this.check3.CheckedChanged += new System.EventHandler(this.check3_CheckedChanged);
             // 
-            // chDif
+            // check4
             // 
-            this.chDif.AutoSize = true;
-            this.chDif.Location = new System.Drawing.Point(274, 117);
-            this.chDif.Name = "chDif";
-            this.chDif.Size = new System.Drawing.Size(15, 14);
-            this.chDif.TabIndex = 17;
-            this.chDif.UseVisualStyleBackColor = true;
+            this.check4.AutoSize = true;
+            this.check4.Location = new System.Drawing.Point(643, 118);
+            this.check4.Name = "check4";
+            this.check4.Size = new System.Drawing.Size(15, 14);
+            this.check4.TabIndex = 17;
+            this.check4.UseVisualStyleBackColor = true;
+            this.check4.CheckedChanged += new System.EventHandler(this.check4_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(302, 302);
+            this.ClientSize = new System.Drawing.Size(671, 302);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.chDif);
+            this.Controls.Add(this.check4);
             this.Controls.Add(this.dgvRes);
-            this.Controls.Add(this.chIgual);
+            this.Controls.Add(this.check3);
             this.Controls.Add(this.lblQuery);
-            this.Controls.Add(this.chMenor);
-            this.Controls.Add(this.chMayor);
+            this.Controls.Add(this.check2);
+            this.Controls.Add(this.check1);
             this.Controls.Add(this.lblCol);
             this.Controls.Add(this.lblEmpieza);
             this.Controls.Add(this.lblTablas);
@@ -268,11 +273,11 @@
             this.Controls.Add(this.lblCampo1);
             this.Controls.Add(this.lblIgual);
             this.Controls.Add(this.lblCampo2);
-            this.Controls.Add(this.txtDif);
-            this.Controls.Add(this.txtMayor);
-            this.Controls.Add(this.txtIgual);
+            this.Controls.Add(this.txt4);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txt3);
             this.Controls.Add(this.lblMayor);
-            this.Controls.Add(this.txtMenor);
+            this.Controls.Add(this.txt2);
             this.Controls.Add(this.lblContiene);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -294,20 +299,20 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblCampo1;
         private System.Windows.Forms.Label lblCampo2;
-        private System.Windows.Forms.TextBox txtMayor;
+        private System.Windows.Forms.TextBox txt1;
         private System.Windows.Forms.Label lblMayor;
         private System.Windows.Forms.Label lblContiene;
-        private System.Windows.Forms.TextBox txtMenor;
-        private System.Windows.Forms.TextBox txtIgual;
-        private System.Windows.Forms.TextBox txtDif;
+        private System.Windows.Forms.TextBox txt2;
+        private System.Windows.Forms.TextBox txt3;
+        private System.Windows.Forms.TextBox txt4;
         private System.Windows.Forms.Label lblIgual;
         private System.Windows.Forms.Label lblCampo3;
         private System.Windows.Forms.Label lblCampo4;
         private System.Windows.Forms.Label lblEmpieza;
-        private System.Windows.Forms.CheckBox chMayor;
-        private System.Windows.Forms.CheckBox chMenor;
-        private System.Windows.Forms.CheckBox chIgual;
-        private System.Windows.Forms.CheckBox chDif;
+        private System.Windows.Forms.CheckBox check1;
+        private System.Windows.Forms.CheckBox check2;
+        private System.Windows.Forms.CheckBox check3;
+        private System.Windows.Forms.CheckBox check4;
     }
 }
 
