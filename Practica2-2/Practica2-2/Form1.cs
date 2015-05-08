@@ -109,7 +109,7 @@ namespace Practica2_2
                         {
                             if (txt3.Text != String.Empty)
                             {
-                                filtros = "WHERE " + lblCampo3.Text + " = " + txt3.Text;
+                                filtros = "WHERE " + lblCampo3.Text + " = '" + txt3.Text + "'";
                                 filtrosParam = "WHERE " + lblCampo3.Text + " = @marca";
                                 if (!param.Contains("marca"))
                                     param.Add("marca");
@@ -121,7 +121,7 @@ namespace Practica2_2
                         {
                             if (txt3.Text != String.Empty)
                             {
-                                filtros += " AND " + lblCampo3.Text + " = " + txt3.Text;
+                                filtros += " AND " + lblCampo3.Text + " = '" + txt3.Text + "'";
                                 filtrosParam += " AND " + lblCampo3.Text + " = @marca";
                                 if (!param.Contains("marca"))
                                     param.Add("marca");
@@ -294,7 +294,7 @@ namespace Practica2_2
         {
             if (!(lblCampo1.Text == "[Campo]"))
             {
-                Operaciones objOp = new Operaciones();
+                 Operaciones objOp = new Operaciones();
                 objOp.Elemento = FormarEstructura();
                 DataTable Dtt = new DataTable();
                 Dtt = objOp.ObtenerDtt();
